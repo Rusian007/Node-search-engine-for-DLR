@@ -1,6 +1,7 @@
 const fs = require('fs')
 const lunr = require('lunr')
 const tsHelper = require("./helper2")
+const promptS = require("prompt-sync")({ sigint: true });
 
 let documents = [
   {
@@ -47,7 +48,14 @@ function searchItem(res) {
 
 function ReadFile() {
   let result = fs.readFileSync('output.txt').toString()
-  tsHelper.SeperateText(result)
+
+  //User gives title as a input
+ // let title1 = promptS("Input Title ! ..")
+ // console.log("Here is your Title Name: " + title1);
+
+  let titleReges2 = /Anti-Corruption Commission Act/
+  let titleReges3 = /NULL/ // null for page end 
+  tsHelper.SeperateText(result, titleReges2, titleReges3)
   return result
 }
 
