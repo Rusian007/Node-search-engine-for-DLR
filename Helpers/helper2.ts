@@ -17,7 +17,6 @@ function SeperateText(TheText: String, titleRegex1: RegExp, titleReges2: RegExp)
 
     let ResultArray = ""
 
-
         if ( FirstTitle?.index) {
 
             if (secondTitle?.index) { //just Checking for if second title exists or not to loop through

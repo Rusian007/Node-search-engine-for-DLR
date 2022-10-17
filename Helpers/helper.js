@@ -5,15 +5,18 @@ const promptS = require("prompt-sync")({ sigint: true });
 
 let documents = [
   {
-    name: 'Lunr',
-    text: 'Like Solr, but much smaller, and not as bright.',
+    name: 'Lunr', //Name is just for referencing - it is used to identify an item uniquely
+    title: 'Lunr', //Any title
+    text: 'Like Solr, but much smaller, and not as bright.', //Main text description
   },
   {
     name: 'React',
+    title: 'React',
     text: 'A JavaScript library for building user interfaces.',
   },
   {
     name: 'Lodash',
+    title: "Lodash",
     text:
       'A modern JavaScript utility library delivering modularity, performance & extras.',
   },
@@ -27,7 +30,7 @@ async function Extractor(TheText) {
 }
 function Indexer() {
   var idx = lunr(function () {
-    //this.field('name')
+    this.field('title')
     this.field('text')
     this.ref('name')
 
@@ -35,7 +38,7 @@ function Indexer() {
       this.add(doc)
     }, this)
   })
-  let res = idx.search('as bright')
+  let res = idx.search('React') //get result as index
   const results = searchItem(res)
   console.log(results)
 }

@@ -10,19 +10,13 @@ function SeperateText(TheText, titleRegex1, titleReges2) {
     // const numArray = [...TheText.matchAll(numregex)]
     const FirstTitle = TheText.match(titleRegex1);
     const secondTitle = TheText.match(titleReges2);
-    console.log(secondTitle);
-    //const ThirdTitle = TheText.match(titleReges3)
     let ResultArray = "";
     if (FirstTitle === null || FirstTitle === void 0 ? void 0 : FirstTitle.index) {
-        // console.log("************Index matched************");
         if (secondTitle === null || secondTitle === void 0 ? void 0 : secondTitle.index) { //just Checking for if second title exists or not to loop through
-            // for (let j = (FirstTitle.index + FirstTitle[0].length); j < secondTitle.index; j++) {
-            // ResultArray = ResultArray + TheText.charAt(j)
             let start = FirstTitle.index + FirstTitle[0].length;
             let end = secondTitle.index;
             ResultArray = TheText.slice(start, end); //find the part only from the first title to ending of another title
-            //  }
-            FindAndSliceASection(ResultArray, FirstTitle[0]); // split the title , section 
+            FindAndSliceASection(ResultArray, FirstTitle[0]); // split the title , section (One section per title, if one title has several section then it will just loop through)
         }
         else {
             console.log("The second title not exists");
@@ -31,18 +25,13 @@ function SeperateText(TheText, titleRegex1, titleReges2) {
             FindAndSliceASection(ResultArray, FirstTitle[0]);
         }
     }
-    /* else if(i == secondTitle?.index ){
-        console.log("Second title reached");
-        
-    } */
 }
 function FindAndSliceASection(ResultArray, titleName) {
-    let Sectionregex = /Sections? [0-9][0-9]?\s?&?\s?[0-9]?[0-9]?\(?[0-9]?\)?—/g;
-    let numregex = /[^0-9][0-9][0-9][0-9]\n/g;
-    let jsonObj;
+    let Sectionregex = /Sections? [0-9][0-9]?\s?&?\s?[0-9]?[0-9]?\(?[0-9]?\)?—/g; //Regular expressions to find Sections
+    let numregex = /[^0-9][0-9][0-9][0-9]\n/g; // Regular expressions to find The number after every section ending
+    let jsonObj; // Our JSON object
     let Section = [...ResultArray.matchAll(Sectionregex)];
     let Num = [...ResultArray.matchAll(numregex)];
-    // console.log(Num);
     Section === null || Section === void 0 ? void 0 : Section.map((item, index) => {
         if (item.index) {
             let start = item.index + item[0].length;
@@ -53,7 +42,7 @@ function FindAndSliceASection(ResultArray, titleName) {
                     title: titleName,
                     sectionName: item[0],
                     sectionDescription: OneSection
-                };
+                }; // TODO: Write this object as JSON in a file or save to the database
                 console.log(jsonObj);
             }
             else
