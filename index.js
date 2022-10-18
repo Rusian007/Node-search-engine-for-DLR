@@ -5,6 +5,7 @@ let bodyParser = require('body-parser');
 const multer = require('multer')
 const path = require('path')
 const helper = require("./Helpers/helper")
+var sparkViews = require('./views/sparkViews')
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname+'/uploades')))
@@ -26,11 +27,7 @@ var storage = multer.diskStorage({
 const upload = multer({storage:storage})
 
 app.get('/', async function(req, res) {
-	/* home.then(
-		(text)=>{
-			res.send(text)
-		}
-	) */
+	
 	res.render('index', {data:''})
 
 })
@@ -51,6 +48,8 @@ app.post("/extractText", upload.single("file"), (req,res)=>{
 		  console.log(error.message)
 		})
 })
+
+app.use('/view',sparkViews);
 app.listen(3000, function(){
 	console.log("Server started on port: 3000")
 })

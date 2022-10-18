@@ -1,6 +1,7 @@
 from pyspark.sql import SparkSession
+import sys
 
-print("Import complete")
+print("Import complete \n")
 
 spark = SparkSession.builder.appName('test').getOrCreate()
 

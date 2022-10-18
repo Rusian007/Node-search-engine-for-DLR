@@ -7,13 +7,19 @@
     <title>Start</title>
 </head>
 <body>
-    <form action="extractText" method="post" enctype="multipart/form-data">
+    <section>
+    <!--suppress HtmlUnknownTarget -->
+        <form action="extractText" method="post" enctype="multipart/form-data">
         <label for="file">Upload a Image first</label>
         <input type="file" name="file" accept="image/*" required id="">
         <button type="submit"> Extract Text</button>
     </form>
-    <textarea cols="20" rows="20">
-        <%=data%>
-    </textarea>
+    </section>
+
+    <label>
+<textarea cols="20" rows="20">
+    <%=data%>
+</textarea>
+    </label>
 </body>
 </html>
