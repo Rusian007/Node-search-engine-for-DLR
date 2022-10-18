@@ -6,7 +6,6 @@ const multer = require('multer')
 const path = require('path')
 const helper = require("./Helpers/helper")
 
-
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname+'/uploades')))
 
@@ -35,15 +34,7 @@ app.get('/', async function(req, res) {
 	res.render('index', {data:''})
 
 })
-app.get('/run', async function(req, res) {
-	helper.Indexer()
-	res.send("File Indexer ready")
 
-})
-app.get('/read', function(req, res){
-	let outputText = helper.ReadFile()
-	res.send(` ${outputText} `)
-})
 app.post("/extractText", upload.single("file"), (req,res)=>{
 	console.log(req.file.path)
 	const config = {
