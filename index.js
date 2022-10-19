@@ -27,7 +27,7 @@ var storage = multer.diskStorage({
 const upload = multer({storage:storage})
 
 app.get('/', async function(req, res) {
-	
+	await helper.RunPySparker()
 	res.render('index', {data:''})
 
 })

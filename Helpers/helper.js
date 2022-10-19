@@ -1,5 +1,8 @@
 const fs = require('fs')
-var {PythonShell} = require('python-shell');
+const nodecallspython = require("node-calls-python");
+
+const py = nodecallspython.interpreter;
+
 
 async function Extractor(TheText) {
   await fs.appendFile('DLROutput.txt', TheText, (err) => {
@@ -11,12 +14,23 @@ async function Extractor(TheText) {
   })
 }
 
-async function RunPySparker(query){
+async function RunPySparker(){
   console.log("calling python Script ....");
-  PythonShell.run("./pyscripts/hello.py",null,function(err, res){
-    if(err) throw err;
-    console.log("Done: %j", res);
-  })
   
+   py.import("./pyscripts/sparker.py").then(async function(pymodule) {
+    const result = await py.call(pymodule, "printHello");
+    console.log("This is what Python says,  %j",result);
+});
+
 }
-module.exports = { RunPySparker,Extractor }
+
+async function RunFilter(){
+  console.log("Calling FIlter");
+
+     py.import("./pyscripts/filter.py").then(async function(pymodule){
+       const result = await py.call(pymodule,"FilterText");
+       console.log(result);
+     })
+
+}
+module.exports = { RunPySparker,Extractor,RunFilter }

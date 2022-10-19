@@ -7,7 +7,8 @@ spark = SparkSession.builder.appName('test').getOrCreate()
 
 print("APP creation complete")
 
-df = spark.sparkContext.textFile("../twinkle.txt")
-filtered = df.filter(lambda ele: "twinkle" in ele)
-filter = filtered.collect()
-print(filter)
+df = spark.sparkContext.textFile("./twinkle.txt")
+
+def printHello():
+    print("Hello !")
+    return "Hello From Python"

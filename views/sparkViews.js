@@ -3,7 +3,7 @@ var router = express.Router();
 const helper = require("../Helpers/helper")
 
 router.get('/spark',async(req,res)=>{
-    await helper.RunPySparker("something")
+    helper.RunFilter()
     res.send("You successfully invoked sparker, check console")
 })
 
