@@ -18,8 +18,8 @@ async function RunPySparker(){
   console.log("calling python Script ....");
   
    py.import("./pyscripts/sparker.py").then(async function(pymodule) {
-    const result = await py.call(pymodule, "printHello");
-    console.log("This is what Python says,  %j",result);
+    const result = await py.call(pymodule, "Initialize");
+    console.log(result);
 });
 
 }
