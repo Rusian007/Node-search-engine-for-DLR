@@ -10,5 +10,5 @@ def Initialize():
     print("APP creation complete")
 
     df = spark.sparkContext.textFile("./twinkle.txt")
-    
     return 0
+

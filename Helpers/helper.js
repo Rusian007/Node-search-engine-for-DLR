@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs');
 const nodecallspython = require("node-calls-python");
 
 const py = nodecallspython.interpreter;
@@ -8,7 +8,7 @@ async function Extractor(TheText) {
   await fs.appendFile('DLROutput.txt', TheText, (err) => {
     if (err) throw err
     else {
-      console.log('Write Complete \n')
+      console.log('Write Complete \n');
       console.log("Please Check")
     }
   })
@@ -31,6 +31,5 @@ async function RunFilter(){
        const result = await py.call(pymodule,"FilterText");
        console.log(result);
      })
-
 }
 module.exports = { RunPySparker,Extractor,RunFilter }
