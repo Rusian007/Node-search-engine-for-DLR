@@ -1,7 +1,7 @@
 require "sinatra"
 require 'date'
 require "./helpers/tesseract"
-
+require "./helpers/readfile"
 set :public_folder, __dir__ + '/views'
 
 ##get req for home page
@@ -39,4 +39,12 @@ post "/upload/file" do
 
   @toShow = false
   erb:upload
+end
+
+## Get path to show output of the files
+get "/upload/view" do
+  readObj = Readfile.new("Output.txt")
+  output = readObj.ReadTheFile
+  @output = output
+  erb:view
 end
