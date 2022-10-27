@@ -11,7 +11,8 @@ end
 
 ## get rq to upload page
 get "/upload" do
-  @toShow = true
+  @toShow = true # true = show the upload file form
+  @text = ""
   erb:upload
 end
 
@@ -25,26 +26,32 @@ post "/upload/file" do
   #Read from uploaded file
   File.open("./uploads/#{filename}", 'wb') do |f|
     f.write(file.read)
-
   end
 
   tessObj = Tesseract.new(filename)
   theText = tessObj.read
-  #puts theText.to_s
 
-  #Write Results to file
-  File.open("./outputs/Output.txt", 'a') do |f|
-    f.puts theText.to_s
-  end
-
-  @toShow = false
+  @toShow = false #Shows the upload form
+  @text = theText.to_s
   erb:upload
+
 end
 
-## Get path to show output of the files
-get "/upload/view" do
-  readObj = Readfile.new("Output.txt")
-  output = readObj.ReadTheFile
-  @output = output
+
+## Get path to show output of the files and also write to output.txt
+post "/upload/view" do
+  theText = params[:review]
+
+#Write Results to file
+ File.open("./outputs/Output.txt", 'a') do |f|
+  f.puts theText
+ end
+
   erb:view
+end
+
+get "/json" do
+  readObj = Readfile.new("Output2010.txt")
+  # Call Json function
+  "Reading File"
 end

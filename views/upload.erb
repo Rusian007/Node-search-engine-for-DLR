@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload - Home</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
 </head>
 <body>
     <% if @toShow %>
@@ -14,10 +15,13 @@
             <input type="submit" value="Upload image" >
         </form>
     <% else %>
-    <h2>Upload Complete :) Check the outputs/Output.txt file for results</h2>
-    <div>
-        <a href="/upload">Click Here to upload more !</a>
-    </div>
-    <% end %>
-</body>
+    <h2>Upload Complete :) Check the outputs Here</h2>
+    <form action="/upload/view" method="POST">
+    <textarea style="font-size: 20px; padding: 5px" id="review" name="review" rows="25" cols="50">
+        <%= @text %>
+    </textarea>
+    <input class="btn btn-primary" type="submit" value = "Confirm Upload !"/>
+    </form>
+         <% end %>
+</body> 
 </html>

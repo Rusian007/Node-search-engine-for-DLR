@@ -1,18 +1,14 @@
 class Readfile
-
+# Read file was created to structure our file to JSON format
+# # ToDo: Must convert file to JSON format
+# Constructor
   def initialize(filename)
     @TheFilename = filename
     @location = "./outputs/#{@TheFilename}"
   end
 
-  def ReadTheFile()
-    theFile = File.open(@location)
-    if theFile
-      data = theFile.read
-      return data
-    else
-      puts "File not Found :("
-      return ""
-    end
+  # Read file by line and convert to JSON
+  def ReadFileToJson()
+
   end
 end
