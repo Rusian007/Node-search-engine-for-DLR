@@ -35,7 +35,9 @@ Clone using: `git clone -b main https://github.com/Rusian007/Search-Engine-ForDL
 ### 3. Run Bundler
 
 go into the directory and run in terminal or in CMD (in windows)
+First type: `gem install sinatra`
+This commant will install Sinatra for you
 
-type: `bundler` , this will install all necessery dependencies
+Then type: `bundler` , this will install all necessery dependencies
 
 then type `bundler exec rackup` , this will start the server in `http://127.0.0.1:9292`
