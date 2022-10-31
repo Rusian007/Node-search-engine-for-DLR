@@ -1,0 +1,38 @@
+
+<% content_for :title, "Upload" %>
+<%= stylesheet_link_tag 'bootstrap.min' %>
+
+<div class="container">
+
+  <% if @showform == true %>
+
+  <%= form_tag("/upload", method: "post", multipart: true) do %>
+    <%= label_tag(:file, "Upload a Picture First:") %>
+    <hr>
+    <%= file_field_tag(:file) %>
+    <%= submit_tag("Confirm", class:"btn btn-warning") %>
+  <% end %>
+
+  <hr>
+  <h3> Sometimes hard work does not pay off :( </h3>
+  <h3> But <b>Allah</b> has a better plan for us :) </h3>
+
+  <% else %>
+    <h3 class="text-success">Upload Complete :) Check the outputs Here</h4>
+    <h4> Correct Broken words before uploading,<br>
+     Half rendered words also need to be corrected for processing <br>
+     When you are done press confirm 
+
+   </h4>
+
+  <%= form_tag("/view", method: "post") do %>
+      <input class="btn btn-primary" type="submit" value = "Confirm Upload !"/>
+      <hr>
+            <textarea style="font-size: 20px; background: #3c3c3c; color: white;
+            padding: 5px" id="review" name="review" rows="25" cols="52">
+            <%= @theText %>
+            </textarea>
+
+    <% end %>
+  <% end %>
+</div>

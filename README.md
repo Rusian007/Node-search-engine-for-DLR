@@ -1,43 +1,24 @@
-# Search-engine-for-DLR
+# README
 
-This is a search engine for Dhaka Law Reports
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-To run the server follow the following steps 😄 :
+Things you may want to cover:
 
-### 1.First Install Ruby
+* Ruby version
 
-If you do not have Ruby installed then install ruby-
+* System dependencies
 
-**In Windows**
+* Configuration
 
-go to [Ruby Official Page](https://rubyinstaller.org/) and download the ruby Installer.
+* Database creation
 
-verify installation by running `ruby -v` in CMD
+* Database initialization
 
-**In Linux**
+* How to run the test suite
 
-`For Debian or Ubuntu` type in console:
+* Services (job queues, cache servers, search engines, etc.)
 
-`sudo apt-get install ruby-full`
+* Deployment instructions
 
-Or
-
-`pacman (Arch Linux)` type in console:
-
-`sudo pacman -S ruby`
-
-
-### 2. Clone the repository
-
-Clone using: `git clone -b main https://github.com/Rusian007/Search-Engine-ForDLR.git`
-
-
-### 3. Run Bundler
-
-go into the directory and run in terminal or in CMD (in windows)
-First type: `gem install sinatra`
-This commant will install Sinatra for you
-
-Then type: `bundler` , this will install all necessery dependencies
-
-then type `bundler exec rackup` , this will start the server in `http://127.0.0.1:9292`
+* ...
