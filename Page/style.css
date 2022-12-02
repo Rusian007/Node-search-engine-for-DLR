@@ -1,4 +1,8 @@
-  body {
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+:root {
+  --header-height: 53px;
+}
+body {
       background-color: #D3D3D3;
       background-position: center;
       background-repeat: no-repeat;
@@ -9,6 +13,57 @@
       height: 100vh;
       overflow: hidden;
     }
+header {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 250;
+  height: var(--header-height);
+}
+.header {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+.header .logo {
+  font-family: 'Comforter Brush', cursive;
+padding-left: 40px;
+  font-size:38px;
+}
+.header .menu .drawer {
+  display: flex;
+  height: var(--header-height);
+  padding-right: 100px;
+}
+.header .menu .drawer a {
+  text-transform: capitalize;
+  transition: all 0.1s linear;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  color: #585b63;
+  font-size: 17.4px;
+}
+.header .menu .drawer a:hover {
+  background: #f3f3f3;
+}
+.header .menu .drawer a:active {
+  background: #e0e0e0;
+}
+
+.img{
+ height:calc(100vh - 53px);
+ width:100%;
+  object-fit:cover;
+  display:block;
+}
+
     .center {
       position: absolute;
       top: 50%;
