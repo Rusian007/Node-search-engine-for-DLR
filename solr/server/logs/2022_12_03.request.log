@@ -1,0 +1,11 @@
+127.0.0.1 - - [03/Dec/2022:03:53:32 +0000] "GET /solr/dlr_search/select?indent=true&q=section%3Agreed%2C%0Atitle%3Agreed&q.op=OR HTTP/1.1" 200 228
+127.0.0.1 - - [03/Dec/2022:03:53:39 +0000] "GET /solr/dlr_search/select?indent=true&q=section%3Awhere%2C%0Atitle%3Awhere&q.op=OR HTTP/1.1" 200 4290
+127.0.0.1 - - [03/Dec/2022:03:55:27 +0000] "GET /solr/dlr_search/select?indent=true&q=section%3Awhere%2C%0Atitle%3Awhere&q.op=OR HTTP/1.1" 200 4290
+127.0.0.1 - - [03/Dec/2022:03:56:06 +0000] "GET /solr/dlr_search/select?indent=true&q=section%3Awhere%2C%0Atitle%3Awhere&q.op=OR HTTP/1.1" 200 4289
+127.0.0.1 - - [03/Dec/2022:03:58:16 +0000] "GET /solr/dlr_search/select?indent=true&q=section%3Awhere%2C%0Atitle%3Awhere&q.op=OR HTTP/1.1" 200 4289
+127.0.0.1 - - [03/Dec/2022:03:58:40 +0000] "GET /solr/dlr_search/select?indent=true&q=section%3Awhere%2C%0Atitle%3Awhere&q.op=OR HTTP/1.1" 200 4289
+127.0.0.1 - - [03/Dec/2022:03:59:29 +0000] "GET /solr/dlr_search/select?indent=true&q=section%3Awhere%2C%0Atitle%3Awhere&q.op=OR HTTP/1.1" 200 4288
+127.0.0.1 - - [03/Dec/2022:04:04:06 +0000] "GET /solr/dlr_search/select?indent=true&q=section%3Awhere%2C%0Atitle%3Awhere&q.op=OR HTTP/1.1" 200 4289
+127.0.0.1 - - [03/Dec/2022:04:08:53 +0000] "GET /solr/dlr_search/select?indent=true&q=section%3Awhere%2C%0Atitle%3Awhere&q.op=OR HTTP/1.1" 200 4289
+127.0.0.1 - - [03/Dec/2022:04:12:49 +0000] "GET /solr/dlr_search/select?indent=true&q=section%3Awhere%2C%0Atitle%3Awhere&q.op=OR HTTP/1.1" 200 4288
+127.0.0.1 - - [03/Dec/2022:04:13:05 +0000] "GET /solr/dlr_search/select?indent=true&q=section%3Abribe%2C%0Atitle%3Abribe&q.op=OR HTTP/1.1" 200 2023

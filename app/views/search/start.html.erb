@@ -5,18 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search | Start</title>
-    <style>
-        body{
-            text-align: center;
-        }
-    </style>
+    <%= stylesheet_link_tag "Home" %>
+
 </head>
 <body>
-    <h2> What to search ? </h2>
-    <hr>
-    <%= form_tag( '/search' , remote: true) do |f| %>
-    <input type="text" name="query">
-    <input type="submit">
+    <header>
+      <div class="header">
+
+        <div class="logo"></div>
+        <nav class="menu">
+          <div class="drawer">
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+
+      </div>
+    </header>
+
+     <div class="center">
+      <h1>DLR Search Engine</h1>
+       <%= form_tag( '/search' , remote: true) do |f| %>
+    <div class="txt_field" label="">
+          <input name="query" type="text" required placeholder="enter query" />
+          <span></span>
+          <label></label>
+        </div>
+        <input type="submit" value="Search" />
     <% end %>
+    </div>
+
+   
 </body>
 </html>

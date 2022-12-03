@@ -4,16 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search | Start</title>
+    <title>Search | :)</title>
+     <%= stylesheet_link_tag "search" %>
 </head>
 <body>
-    <h2> Here are the results </h2>
+    
+<header>
+      <div class="header">
 
+        <div class="logo"></div>
+        <nav class="menu">
+          <div class="drawer">
+            <a href="/">Search</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+
+      </div>
+</header>
+
+
+    <div id="page-content" class="content">
+    
+    <% if !@activity.empty? %>
     <% for record in @activity do%>
-       <h3> <%= record.returnTitle %> </h3>
-       <p> <%= record.returnSection %> </p>
-       <hr>
+      <div id="home-div">
+
+      <div id="home" class="content-title">
+        <h2 ><%= record.returnTitle %> </h2>
+        <h6> <%= record.returnSubSection %> </h6>
+      </div> 
+
+        <article>
+          <p>
+            <%= sanitize(record.returnSection) %>
+            </p>
+        </article>
+      </div>
+      <% end %>
+      <% else %>
+      <div id="home-div">
+        <h2 id="home" class="content-title"> Sorry ,we didn't find anything :( </h2>
+        
+      </div>
     <% end %>
+    </div>
+
+    
+   
+    
 
 </body>
 </html>
