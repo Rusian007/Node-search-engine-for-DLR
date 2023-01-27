@@ -32,10 +32,29 @@
 
       <div id="home" class="content-title">
         <h2 ><%= record.returnTitle %> </h2>
-        <h6> <%= record.returnSubSection %> </h6>
+        
+       
       </div> 
 
         <article>
+
+        <div class="article-tags">
+        
+        <% if !record.returnYear.empty? %>
+              <h4 class="year round"><%= record.returnYear %> </h4> </h5>
+        <% else %>
+        <% end %>
+
+
+
+        
+        <% if !record.returnSubSection.empty? %>
+             <h5 class="subsection round"> <%= record.returnSubSection %> </h5>
+         <% else %>
+          <% end %>
+            
+        </div>
+       
           <p>
             <%= sanitize(record.returnSection) %>
             </p>

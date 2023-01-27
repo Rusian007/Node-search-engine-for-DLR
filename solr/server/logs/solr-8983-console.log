@@ -1,10 +1,10 @@
-[0.029s][warning][pagesize] UseLargePages disabled, no large pages configured and available on the system.
+[0.001s][warning][pagesize] UseLargePages disabled, no large pages configured and available on the system.
 WARNING: A command line option has enabled the Security Manager
 WARNING: The Security Manager is deprecated and will be removed in a future release
-2022-12-03 03:50:37.425 INFO  (main) [] o.e.j.u.log Logging initialized @3537ms to org.eclipse.jetty.util.log.Slf4jLog
-2022-12-03 03:50:37.856 INFO  (main) [] o.e.j.s.Server jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 19.0.1+10
-2022-12-03 03:50:38.881 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
-2022-12-03 03:50:38.892 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.0.0
-2022-12-03 03:50:38.892 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
-2022-12-03 03:50:38.892 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /home/arafat/Documents/Search-Engine-ForDLR/solr
-2022-12-03 03:50:38.893 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2022-12-03T03:50:38.892980710Z
+2023-01-27 16:23:07.313 INFO  (main) [] o.e.j.u.log Logging initialized @2103ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-01-27 16:23:07.634 INFO  (main) [] o.e.j.s.Server jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 19.0.2+7
+2023-01-27 16:23:08.593 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2023-01-27 16:23:08.601 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.0.0
+2023-01-27 16:23:08.602 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2023-01-27 16:23:08.602 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /home/arafat/Documents/Search-Engine-ForDLR/solr
+2023-01-27 16:23:08.602 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2023-01-27T16:23:08.602271742Z
