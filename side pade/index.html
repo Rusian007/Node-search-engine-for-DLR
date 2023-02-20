@@ -1,7 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
 <link rel="stylesheet" type="text/css" href="style.css">
-<body>
 
-<header>
+<title>Search | :( </title>
+</head>
+<body>
+ <header>
       <div class="header">
 
         <div class="logo"></div>
@@ -13,26 +18,69 @@
         </nav>
 
       </div>
-</header>
+</header>   
 
+<button type="button" class="collapsible">Section Title</button>
+<div class="content">
+    <div id="page-content1" class="content1">
+      <div id="home-div1">
+       <div id="home1" class="content-title1">
+        <h2 >title</h2>
+      </div> 
 
-    <div id="page-content" class="content">
-      <div id="home-div">
-        <h2 id="home" class="content-title">TITLE</h2>
         <article>
+
+          <div class="article-tags">
+             <h4 class="year round">Year</h4>
+             <h5 class="subsection round">Title Sub Section</h5>
+          </div>
+
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          article stuffs      
           </p>
 
-        </article>
-      </div>
+         </article>
+        </div>
+    </div>
 
+   <div id="page-content1" class="content1">
+      <div id="home-div1">
+       <div id="home1" class="content-title1">
+        <h2 >title</h2>
+      </div> 
+
+        <article>
+
+          <div class="article-tags">
+             <h4 class="year round">Year</h4>
+             <h5 class="subsection round">Title Sub Section</h5>
+          </div>
+
+          <p>
+           article stuffs 
+
+         </article>
+        </div>
+    </div>    
+</div>
+
+
+<script>
+var collap = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < collap.length; i++) {
+  collap[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 </body>
-
 </html>
