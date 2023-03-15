@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+:root {
+  --header-height: 60px;
+}
+*{
+
+  font-family: "Times New Roman", Times, serif;
+}
+.a{
+  opacity: 0.8;
+  width: 100%;
+  height: 100vh;  
+  background-size: cover;
+}
+header {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 250;
+  height: var(--header-height);
+}
+.header { 
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+.header .menu .drawer {
+  display: flex;
+  height: var(--header-height);
+  padding-right: 100px;
+}
+.header .menu .drawer a { 
+  text-transform: capitalize;
+  transition: all 0.1s linear;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  color: #585b63;
+  font-size: 18px;
+}
+
+.header .menu .drawer a:hover {
+  background: #f3f3f3;
+}
+
+.header .menu .drawer a:active {
+  background: #e0e0e0;
+}
+a{
+  text-decoration:none; 
+  color:inherit; 
+  cursor:pointer;
+}
+button{
+  background-color:transparent; 
+  color:inherit; 
+  border-width:0; 
+  padding:0; cursor:pointer;
+}
+
+h3{
+  margin:0; 
+  font-size:inherit; 
+  font-weight:inherit;
+}
+p{
+  text-indent: 30px;
+  width: 100%;
+  font-size: 15px;
+  margin:0;
+}
+body {
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  background: #e3f6f5 !important; 
+}
+
+main {
+  position: absolute;
+  grid-template-columns: 146px 640px auto;
+  grid-template-rows: auto;
+}
+#main {
+  grid-area: main;
+}
+
+.search-results-block {
+
+  padding-top: 8px;
+}
+
+.search-result {
+  margin-bottom: 28px;
+}
+
+.search-result a {
+  display: inline-block;
+  color: #1a0dab;
+}
+
+.search-result > a:hover h3 {
+  text-decoration: underline;
+}
+
+.search-result a:visited {
+  color: #609;
+}
+
+h3 {
+  color: black;
+  margin-top: 4px;
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.result-text {
+  margin-top: 3px;
+  line-height: 1.57;
+  color: #3C4043;
+}
+tr {
+  width: 100%; 
+  vertical-align: top;
+}
+table{
+  background-size: cover;  
+  padding-top: 15px;
+  padding-left: 50px;
+  margin: 15px;
+}
