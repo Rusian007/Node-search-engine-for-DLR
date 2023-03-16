@@ -1,0 +1,25 @@
+<div id="<%= dom_id rule %>">
+  <p>
+    <strong>Title:</strong>
+    <%= rule.title %>
+  </p>
+
+  
+  <p>
+    <% if @check %>
+    <strong>section text:</strong>
+    <%= rule.section_text %>
+    <% end %>
+    </p>
+
+  <p>
+    <strong>Year:</strong>
+    <%= rule.year %>
+ 
+
+<hr>
+   <%#   < <% rule.sections.each do |section| %>
+   <%#   <p><%= section.section_text.html_safe  %>  <%#  </p>
+   <%#   <% end %>
+
+</div>

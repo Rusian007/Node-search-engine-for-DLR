@@ -1,0 +1,38 @@
+<header>
+  <div class="header">
+    <div class="logo"></div>
+    <nav class="menu">
+      <div class="drawer">
+        <a href="/">Search</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div id="page-content1" class="content1">
+    <div id="home1" class="content-title1">
+      <h2><%= @details["title"] %></h2>
+    </div>
+
+  <% @details["section_text"].each do |text| %>
+  <div id="home-div1">
+    
+    <article>
+      <div class="article-tags">
+      <% if @details["year"].present? %>
+        <h4 class="year round"><%= @details["year"] %></h4>
+      <% end %>
+
+      <% if @details["subsection"].present? %>
+        <h5 class="subsection round"><%= @details["subsection"] %></h5>
+         <% end %>
+      </div>
+      <p>
+      <%= text.html_safe %>
+      </p>
+    </article>
+  </div>
+
+  <% end %>
+</div>

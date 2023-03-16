@@ -1,0 +1,53 @@
+
+
+<div class="a">  
+<header>
+  <div class="header">
+    <div class="logo">     </div>
+      <nav class="menu">
+        <div class="drawer">
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+  <!-- Main Content -->
+<main role="main">
+  <table>
+
+    <div id="main">
+      <div class="search-results-block">
+        <!-- Search Results -->
+      <% @rules.each do |rule| %>
+        <tr>
+          <td>
+            <div class="search-result">
+              <a href="/rules/<%= rule[0] %>">
+                
+                <h3> <%= rule[1][:title] %></h3>
+               
+              </a>
+             
+                <p class="result-text">
+                   <% for section in rule[1][:highlighted] %>
+                  <span>
+                     <%= section.html_safe %> 
+                  </span>
+                 <% end %>
+                </p>
+                
+            </div>
+          </td>
+        </tr>
+      <% end %>
+                
+        
+
+
+      </div>
+    </div>
+  </table>
+</main>
+</div>
