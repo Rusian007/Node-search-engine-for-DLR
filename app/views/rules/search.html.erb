@@ -13,12 +13,26 @@
   </div>
 </header>
 
+
+ <% if @rules.empty? %>
+       <div style="text-align: center !important; margin : 0 auto !important;">
+            <h3 >Nothing Found :(</h3>
+       </div>
+        
+        <% end %>
+
   <!-- Main Content -->
 <main role="main">
+
+
   <table>
 
     <div id="main">
       <div class="search-results-block">
+
+      
+
+
         <!-- Search Results -->
       <% @rules.each do |rule| %>
         <tr>
