@@ -212,6 +212,7 @@ DEPENDENCIES
   debug
   elasticsearch
   elasticsearch-persistence (~> 7.2)
+  elasticsearch-transport
   faraday
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
