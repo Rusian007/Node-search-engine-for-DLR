@@ -8,14 +8,10 @@ require 'elasticsearch'
 #)
 
 # config/initializers/elasticsearch.rb
-client = Elasticsearch::Client.new(
-  cloud_id: '12241899da9a43d5a42c17e2b5f65cab:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvOjQ0MyQ0OGYwYTQ5OWQ5Nzg0NjlmODAwMGY0MGI1NWFmZmNjYSRjZjUzNmVhMTMyYTA0MjRmYWEyNDFhNWRlM2I0MTFkNQ==',
-  api_key: { id: 'eH_V9YYBUfpF6Ugm6BIw', api_key: 'V_FVxOyTQMuexYHRqRl42A' }
-)
+Searchkick.client_options = {
+  url: ENV["ELASTICSEARCH_URL"],
+  transport_options: {
+    request: { timeout: 5 }
+  }
+}
 
-# configure Searchkick to use the Elasticsearch client
-Searchkick.client = Elasticsearch::Client.new(
-
-  cloud_id: '12241899da9a43d5a42c17e2b5f65cab:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvOjQ0MyQ0OGYwYTQ5OWQ5Nzg0NjlmODAwMGY0MGI1NWFmZmNjYSRjZjUzNmVhMTMyYTA0MjRmYWEyNDFhNWRlM2I0MTFkNQ==',
-  api_key: { id: 'eH_V9YYBUfpF6Ugm6BIw', api_key: 'V_FVxOyTQMuexYHRqRl42A' }
-)

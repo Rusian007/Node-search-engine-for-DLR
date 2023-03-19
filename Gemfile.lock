@@ -73,10 +73,10 @@ GEM
     debug (1.7.1)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
-    elasticsearch (7.17.7)
-      elasticsearch-api (= 7.17.7)
-      elasticsearch-transport (= 7.17.7)
-    elasticsearch-api (7.17.7)
+    elasticsearch (7.10.1)
+      elasticsearch-api (= 7.10.1)
+      elasticsearch-transport (= 7.10.1)
+    elasticsearch-api (7.10.1)
       multi_json
     elasticsearch-model (7.2.1)
       activesupport (> 3)
@@ -88,7 +88,7 @@ GEM
       elasticsearch (~> 7)
       elasticsearch-model (= 7.2.1)
       hashie
-    elasticsearch-transport (7.17.7)
+    elasticsearch-transport (7.10.1)
       faraday (~> 1)
       multi_json
     erubi (1.12.0)
@@ -210,9 +210,8 @@ PLATFORMS
 
 DEPENDENCIES
   debug
-  elasticsearch
+  elasticsearch (~> 7.10.1)
   elasticsearch-persistence (~> 7.2)
-  elasticsearch-transport
   faraday
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)

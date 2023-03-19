@@ -18,10 +18,16 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
+
 module ElasticSearcher
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+
+    config.before_configuration do
+      ENV["ELASTICSEARCH_URL"] = "https://gxt57dw9ya:xwp7eibt8u@cc-search-8667489121.us-west-2.bonsaisearch.net:443"
+    end
 
     # Configuration for the application, engines, and railties goes here.
     #
