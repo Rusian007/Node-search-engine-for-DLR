@@ -1,4 +1,5 @@
 require_relative "boot"
+require 'active_support/core_ext/numeric/time'
 
 require "rails"
 # Pick the frameworks you want:
@@ -25,8 +26,10 @@ module ElasticSearcher
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+
+
     config.before_configuration do
-      ENV["ELASTICSEARCH_URL"] = "https://gxt57dw9ya:xwp7eibt8u@cc-search-8667489121.us-west-2.bonsaisearch.net:443"
+      ENV["ELASTICSEARCH_URL"] = "https://yrr5iohnyo:9on8xih2ms@dlr-414544555.us-east-1.bonsaisearch.net:443"
     end
 
     # Configuration for the application, engines, and railties goes here.

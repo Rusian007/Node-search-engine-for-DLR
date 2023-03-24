@@ -1,0 +1,12 @@
+<h2>
+From Upload 
+</h2>
+
+<%= form_tag(search_upload_path, method: :post) do %>
+  <div class="form-group">
+    <%= label_tag :json_input, "JSON Input" %>
+     <%= text_area_tag :json_input, nil, rows: 10, cols: 80 %>
+  </div>
+  
+  <%= submit_tag "Submit", class: 'btn btn-primary' %>
+<% end %>

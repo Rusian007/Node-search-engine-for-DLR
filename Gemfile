@@ -33,3 +33,5 @@ end
 
 
 gem "elasticsearch-persistence", "~> 7.2"
+
+gem "dalli", "~> 3.2"

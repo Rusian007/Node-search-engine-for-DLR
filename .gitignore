@@ -1,0 +1,36 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+# Ignore the yarn cache directory.
+/yarn-cache
+
+# Ignore the puma web server PID file.
+/tmp/pids/server.pid
+
+# Ignore any local configuration files.
+/config/database.yml
+/config/secrets.yml
+/config/application.yml
+
+# Ignore the public/assets directory.
+/public/assets
+
+# Ignore the node_modules directory.
+/node_modules
+
+# Ignore any coverage files.
+/coverage
+
+# Ignore any files that end with .swp (used by Vim).
+*.swp
+
+# Ignore any files that end with .DS_Store (used by macOS).
+.DS_Store

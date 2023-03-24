@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   root "rules#index"
   post 'rules/query', to: 'rules#search', as: :search_query
   get 'rules/:id', to: 'rules#details'
+  get 'upload', to:'rules#upload', as: :search_upload
+  post 'upload', to: 'rules#upload'
 
 end
