@@ -17,7 +17,7 @@ Rails.application.configure do
   # Enable server timing
   config.server_timing = true
 
-  config.cache_store = :mem_cache_store, 'localhost:11211', { namespace: 'searcher', expires_in: 5.minutes }
+  config.cache_store = :mem_cache_store, 'memcached:11211', { namespace: 'searcher-memcached-1', expires_in: 5.minutes }
 
 
 

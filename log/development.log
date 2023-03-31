@@ -4560,3 +4560,277 @@ Processing by RulesController#index as HTML
 Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 1734)
 
 
+Started GET "/" for 172.18.0.1 at 2023-03-24 15:26:08 +0000
+  [1m[35m (72.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (252.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20230228171557_create_rules.rb
+20230301161348_create_sections.rb
+
+
+):
+  
+activerecord (7.0.4.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4.2) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRules (20230228171557)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "rules" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "subsection" varchar, "year" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230228171557"]]
+  [1m[36mTRANSACTION (133.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSections (20230301161348)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "sections" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "section_text" text, "rule_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_6c3c3b6784"
+FOREIGN KEY ("rule_id")
+  REFERENCES "rules" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_sections_on_rule_id" ON "sections" ("rule_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230301161348"]]
+  [1m[36mTRANSACTION (176.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-24 15:27:31.512228"], ["updated_at", "2023-03-24 15:27:31.512228"]]
+  [1m[36mTRANSACTION (168.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-03-24 21:52:31 +0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1532)
+  Rendered layout layouts/application.html.erb (Duration: 116.4ms | Allocations: 15656)
+Completed 200 OK in 128ms (Views: 121.8ms | ActiveRecord: 0.0ms | Allocations: 19008)
+
+
+  [1m[36mRule Load (0.2ms)[0m  [1m[34mSELECT "rules".* FROM "rules" ORDER BY "rules"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[33mRule Import (375.6ms)[0m  {"count":32}
+  [1m[36mSection Load (38.6ms)[0m  [1m[34mSELECT "sections".* FROM "sections" ORDER BY "sections"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[33mSection Import (669.1ms)[0m  {"count":130}
+Started POST "/rules/query" for 127.0.0.1 at 2023-03-24 21:53:28 +0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"Question"}
+  [1m[33mSection Search (607.6ms)[0m  sections_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"Question","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"Question","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"Question","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"Question","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"highlight":{"fields":{"*.analyzed":{}},"fragment_size":0},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mSection Load (0.5ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 103], ["id", 83], ["id", 82], ["id", 52], ["id", 14], ["id", 92], ["id", 44], ["id", 76], ["id", 75], ["id", 124], ["id", 114], ["id", 15], ["id", 28], ["id", 32], ["id", 17], ["id", 55], ["id", 135], ["id", 87], ["id", 106], ["id", 111], ["id", 86], ["id", 95], ["id", 7], ["id", 19], ["id", 119], ["id", 84], ["id", 91], ["id", 116], ["id", 93], ["id", 40], ["id", 35], ["id", 118], ["id", 88], ["id", 45]]
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (0.4ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["id", 10], ["id", 12], ["id", 13], ["id", 14], ["id", 17], ["id", 21], ["id", 22], ["id", 23], ["id", 24], ["id", 25], ["id", 26], ["id", 27], ["id", 31], ["id", 32], ["id", 34], ["id", 35], ["id", 36], ["id", 37]]
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (0.2ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.2ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.2ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.7ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+Dalli::Server#connect localhost:11211
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 5.4ms | Allocations: 978)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 5211)
+Completed 200 OK in 933ms (Views: 26.6ms | Searchkick: 607.6ms | ActiveRecord: 4.6ms | Allocations: 77550)
+
+
+Started GET "/rules/26" for 127.0.0.1 at 2023-03-24 21:53:31 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"26"}
+  Rendering layout layouts/application.html.erb
+  Rendering rules/details.html.erb within layouts/application
+  Rendered rules/details.html.erb within layouts/application (Duration: 14.9ms | Allocations: 443)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 2170)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 3637)
+
+
+Started GET "/rules/10" for 127.0.0.1 at 2023-03-24 21:53:34 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"10"}
+  Rendering layout layouts/application.html.erb
+  Rendering rules/details.html.erb within layouts/application
+  Rendered rules/details.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1293)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 1936)
+
+
+Started GET "/" for 172.18.0.1 at 2023-03-24 16:13:28 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1422)
+  Rendered layout layouts/application.html.erb (Duration: 83.8ms | Allocations: 15955)
+Completed 200 OK in 92ms (Views: 88.6ms | ActiveRecord: 0.0ms | Allocations: 19308)
+
+
+Started POST "/rules/query" for 172.18.0.1 at 2023-03-24 16:13:38 +0000
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"question"}
+  [1m[33mSection Search (155.6ms)[0m  sections_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"question","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"question","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"question","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"question","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"highlight":{"fields":{"*.analyzed":{}},"fragment_size":0},"timeout":"11000ms","_source":false,"size":10000}
+Completed 500 Internal Server Error in 171ms (Searchkick: 155.6ms | ActiveRecord: 0.0ms | Allocations: 8620)
+
+
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to localhost:9200 (Cannot assign requested address - connect(2) for "localhost" port 9200)):
+  
+app/models/section.rb:10:in `search_sections'
+app/controllers/rules_controller.rb:16:in `search'
+Started GET "/" for 172.18.0.1 at 2023-03-31 10:26:42 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 1422)
+  Rendered layout layouts/application.html.erb (Duration: 98.8ms | Allocations: 5602)
+Completed 200 OK in 135ms (Views: 116.4ms | ActiveRecord: 0.0ms | Allocations: 8955)
+
+
+Started POST "/rules/query" for 172.18.0.1 at 2023-03-31 10:26:55 +0000
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"Question"}
+  [1m[33mSection Search (793.4ms)[0m  sections_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"Question","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"Question","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"Question","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"Question","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"highlight":{"fields":{"*.analyzed":{}},"fragment_size":0},"timeout":"11000ms","_source":false,"size":10000}
+Completed 500 Internal Server Error in 1160ms (Searchkick: 793.4ms | ActiveRecord: 0.0ms | Allocations: 8624)
+
+
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to localhost:9200 (Cannot assign requested address - connect(2) for "localhost" port 9200)):
+  
+app/models/section.rb:10:in `search_sections'
+app/controllers/rules_controller.rb:16:in `search'
+Started GET "/" for 172.18.0.1 at 2023-03-31 10:44:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 48.4ms | Allocations: 1422)
+  Rendered layout layouts/application.html.erb (Duration: 865.1ms | Allocations: 5609)
+Completed 200 OK in 895ms (Views: 872.9ms | ActiveRecord: 0.0ms | Allocations: 8961)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-03-31 21:10:12 +0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 1424)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 6135)
+Completed 200 OK in 5170ms (Views: 77.2ms | ActiveRecord: 0.0ms | Allocations: 9512)
+
+
+  [1m[36mRule Load (17.2ms)[0m  [1m[34mSELECT "rules".* FROM "rules" ORDER BY "rules"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[33mRule Import (450.8ms)[0m  {"count":32}
+  [1m[36mRule Load (0.2ms)[0m  [1m[34mSELECT "rules".* FROM "rules" ORDER BY "rules"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[33mRule Import (239.2ms)[0m  {"count":32}
+  [1m[36mRule Load (0.3ms)[0m  [1m[34mSELECT "rules"."id" FROM "rules" ORDER BY "rules"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ lib/tasks/reindex.rake:7:in `block (2 levels) in <top (required)>'
+  [1m[36mRule Load (0.3ms)[0m  [1m[34mSELECT "rules".* FROM "rules" ORDER BY "rules"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[33mRule Import (254.4ms)[0m  {"count":32}
+  [1m[36mSection Load (16.2ms)[0m  [1m[34mSELECT "sections".* FROM "sections" ORDER BY "sections"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[33mSection Import (727.4ms)[0m  {"count":130}

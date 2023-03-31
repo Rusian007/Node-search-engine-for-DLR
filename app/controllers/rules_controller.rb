@@ -5,7 +5,8 @@ class RulesController < ApplicationController
 
   # GET /rules
   def index
- 
+	 system(' bundle exec rake searchkick:reindex:all')
+
 	end
 
   def search
