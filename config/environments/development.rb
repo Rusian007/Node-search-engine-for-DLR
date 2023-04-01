@@ -19,6 +19,7 @@ Rails.application.configure do
 
   config.cache_store = :mem_cache_store, 'memcached:11211', { namespace: 'searcher-memcached-1', expires_in: 5.minutes }
 
+  config.hosts << "searcher.onrender.com"
 
 
   # Print deprecation notices to the Rails logger.
