@@ -17,9 +17,13 @@ Rails.application.configure do
   # Enable server timing
   config.server_timing = true
 
-  config.cache_store = :mem_cache_store, 'memcached:11211', { namespace: 'searcher-memcached-1', expires_in: 5.minutes }
+config.cache_store = :redis_cache_store, {
+  url: ENV["REDIS_URL"] || "redis://red-cgkboa8rddleudu04th0:6379",
+  namespace: "searcher-redis-1",
+  expires_in: 5.minutes
+}
 
-  config.hosts << "192.140.252.28"
+  config.hosts << "dlr.onrender.com"
 
 
   # Print deprecation notices to the Rails logger.
