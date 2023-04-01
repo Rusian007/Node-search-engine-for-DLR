@@ -3,9 +3,13 @@ include RulesHelper
 
 class RulesController < ApplicationController
 
+  def reindex
+    system(' bundle exec rake searchkick:reindex:all')
+  end
+
   # GET /rules
   def index
-	 system(' bundle exec rake searchkick:reindex:all')
+	 
 
 	end
 

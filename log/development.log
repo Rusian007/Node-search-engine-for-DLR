@@ -4834,3 +4834,22 @@ Completed 200 OK in 5170ms (Views: 77.2ms | ActiveRecord: 0.0ms | Allocations: 9
   [1m[33mRule Import (254.4ms)[0m  {"count":32}
   [1m[36mSection Load (16.2ms)[0m  [1m[34mSELECT "sections".* FROM "sections" ORDER BY "sections"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
   [1m[33mSection Import (727.4ms)[0m  {"count":130}
+Started GET "/" for 127.0.0.1 at 2023-04-01 17:08:00 +0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1424)
+  Rendered layout layouts/application.html.erb (Duration: 101.0ms | Allocations: 5605)
+Completed 200 OK in 114ms (Views: 109.1ms | ActiveRecord: 0.0ms | Allocations: 8958)
+
+
+Started GET "/reindex" for 127.0.0.1 at 2023-04-01 17:08:10 +0600
+Processing by RulesController#reindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/reindex.html.erb within layouts/application
+  Rendered rules/reindex.html.erb within layouts/application (Duration: 1.3ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1416)
+Completed 200 OK in 6028ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 1773)
+
+

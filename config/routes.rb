@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get 'rules/:id', to: 'rules#details'
   get 'upload', to:'rules#upload', as: :search_upload
   post 'upload', to: 'rules#upload'
+  get 'reindex', to: 'rules#reindex'
 
 end
