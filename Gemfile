@@ -35,6 +35,6 @@ end
 gem "elasticsearch-persistence", "~> 7.2"
 
 # Gemfile
-
+gem "dalli"
 gem 'redis'
 

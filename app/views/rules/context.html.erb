@@ -1,0 +1,18 @@
+
+<br>
+<h2> <%= @rule.title %> </h2>
+<hr>
+
+<% @sections.each do |section| %>
+  <% # Check if the section's id is present in the section_ids array %>
+  <% if @section_ids.include?(section.id) %>
+    <br>
+    <br>
+    <%= "<em>#{section.section_text}</em>".html_safe %>
+  <% else %>
+    <br>
+    <br>
+    <%= section.section_text %>
+  <% end %>
+  
+<% end %>

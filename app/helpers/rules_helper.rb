@@ -22,6 +22,7 @@ module RulesHelper
         if @results.key?(rule_id)
           # If the rule_id exists, append the highlighted section_text to the existing section_text array
         @results[rule_id][:section_text] <<  hash_object[:section_text]
+        @results[rule_id][:section_id] << hash_object[:id]
         @results[rule_id][:highlighted] <<  hash_object[:highlighted]
         @results[rule_id][:subsection] <<  rule.subsection
         @results[rule_id][:year] <<  rule.year
@@ -31,6 +32,7 @@ module RulesHelper
         @results[rule_id] = { 
           title: rule.title, 
           section_text: [hash_object[:section_text]],
+          section_id: [hash_object[:id]],
           highlighted: [hash_object[:highlighted]],
           subsection: rule.subsection,
           year: rule.year

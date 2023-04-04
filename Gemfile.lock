@@ -70,6 +70,7 @@ GEM
     concurrent-ruby (1.2.2)
     connection_pool (2.4.0)
     crass (1.0.6)
+    dalli (3.2.4)
     date (3.3.3)
     debug (1.7.1)
       irb (>= 1.5.0)
@@ -214,6 +215,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  dalli
   debug
   elasticsearch (~> 7.10.1)
   elasticsearch-persistence (~> 7.2)

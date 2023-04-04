@@ -46,7 +46,20 @@ class RulesController < ApplicationController
      # change to sqLite
 
     @details = results["results"][id]
+    @rules_id = id
     
+  end
+
+  def context
+    # This comes after details and shows entire sections 
+    rule_id = params[:rule_id]
+    @section_ids = JSON.parse(params[:section_id])
+
+    @rule = Rule.find(rule_id)
+    @sections = @rule.sections
+    
+
+
   end
 
   def upload
