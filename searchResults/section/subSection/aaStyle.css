@@ -30,15 +30,7 @@ header {
   justify-content: space-between;
   height: var(--header-height);
 }
-.header .menu .drawer input {
-  text-transform: capitalize;
-  transition: all 0.1s linear;
-  display: flex;
-  align-items: center;
-  padding: 0 30px;
-  color: black;
-  font-size: 18px;
-}
+
 
 .header .menu .drawer {
   display: flex;
@@ -61,12 +53,7 @@ header {
 .header .menu .drawer a:active {
   background: #e0e0e0;
 }
-.header .menu .drawer input:hover {
-  background: #f3f3f3;
-}
-.header .menu .drawer input:active {
-  background: #e0e0e0;
-}
+
 a{
   text-decoration:none; 
   color:inherit; 
@@ -105,44 +92,7 @@ h2{
   padding: 10px;
 }
 
-.article-tags{
-  display: flex;
-  flex-direction: row;
-  padding: 5px;
-  margin: 5px;
-  padding-bottom: 20px;
-}
 
-h4{
-  font-size: 1.2rem;
-  color: black;
-  margin: 0px;
-  padding: 0px;
-}
-h4.year{
-    font-weight: bold;
-}
-.article-tags .year{ /*edit this*/
-  border-radius: 10px;
-  border: 1.5mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 51, 0, 0.5);
-  color: black;
-  padding: 8px 5px;
-  margin: 10px;
-  background-color: none;
-  color: black;
-}
-
-.article-tags .subsection{ /*edit this*/
-
-  padding: 8px 5px;
-  margin: 5px;
-  background-color: none;
-  color: none;
-}
-
-.round{ /*edit this*/
-  border-radius: 10px;
-}
 
 article {
   text-align: start;
