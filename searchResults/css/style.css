@@ -113,9 +113,10 @@ body {
 }
 .search-result h3{
   padding-left: 10px;
-  border-radius: 5px;
-  border-left: 2mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 51, 0, 0.5);
-  border-top: 1mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 41, 0, 0.09);
+  border-radius: 1px;
+  border-left: 4mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 51, 0, 0.5);
+  border-top: 1mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 41, 0, 0.00);
+  border-bottom: 1mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 41, 0, 0.0);
 
 }
 .search-result a {
