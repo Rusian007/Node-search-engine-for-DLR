@@ -122,7 +122,7 @@ h4{
 h4.year{
     font-weight: bold;
 }
-.article-tags .year{ /*edit this*/
+.article-tags .year{ 
   border-radius: 10px;
   border: 1.5mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 51, 0, 0.5);
   color: black;
@@ -132,7 +132,7 @@ h4.year{
   color: black;
 }
 
-.article-tags .subsection{ /*edit this*/
+.article-tags .subsection{ 
 
   padding: 8px 5px;
   margin: 5px;
@@ -140,7 +140,7 @@ h4.year{
   color: none;
 }
 
-.round{ /*edit this*/
+.round{ 
   border-radius: 10px;
 }
 
@@ -151,6 +151,7 @@ article {
 }
 
 #home-div1{
+
   background-color: #fff;
   padding: 0 40px 15px 40px;
   margin-bottom: 25px;
