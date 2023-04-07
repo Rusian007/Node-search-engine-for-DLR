@@ -17,16 +17,16 @@ Rails.application.configure do
   # Enable server timing
   config.server_timing = true
 
-  config.cache_store = :mem_cache_store, 'localhost:11211', { expires_in: 5.minutes }
+  #config.cache_store = :mem_cache_store, 'localhost:11211', { expires_in: 5.minutes }
 
 
 
 
-#config.cache_store = :redis_cache_store, {
- # url: ENV["REDIS_URL"] || "redis://red-cgkboa8rddleudu04th0:6379",
-  #namespace: "searcher-redis-1",
-  #expires_in: 5.minutes
-#} 
+config.cache_store = :redis_cache_store, {
+  url: ENV["REDIS_URL"] || "redis://red-cgkboa8rddleudu04th0:6379",
+  namespace: "searcher-redis-1",
+  expires_in: 5.minutes
+} 
 
   config.hosts << "dlr.onrender.com"
 
