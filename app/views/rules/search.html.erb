@@ -1,64 +1,64 @@
 
 
+
+
+
+
 <div class="a">  
 <header>
   <div class="header">
     <div class="logo">     </div>
       <nav class="menu">
         <div class="drawer">
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <!--<a href="#about">About</a>-->
+          <input type="text" placeholder="Search..">
+         
+
         </div>
       </nav>
   </div>
 </header>
 
 
- <% if @rules.empty? %>
+     <% if @rules.empty? %>
        <div style="text-align: center !important; margin : 0 auto !important;">
             <h3 >Nothing Found :(</h3>
        </div>
         
         <% end %>
 
+
   <!-- Main Content -->
 <main role="main">
-
-
   <table>
 
     <div id="main">
       <div class="search-results-block">
 
-      
-
 
         <!-- Search Results -->
-      <% @rules.each do |rule| %>
+          <% @rules.each do |rule| %>
         <tr>
           <td>
             <div class="search-result">
               <a href="/rules/<%= rule[0] %>">
-                
-                <h3> <%= rule[1][:title] %></h3>
-               
+                <p></p>
+                <h3><%= rule[1][:title] %></h3>
               </a>
-             
+
                 <p class="result-text">
-                   <% for section in rule[1][:highlighted] %>
-                  <span>
+                    <% for section in rule[1][:highlighted] %>
+
+                    <span >
                      <%= section.html_safe %> 
-                  </span>
+                    </span>
                  <% end %>
                 </p>
-                
             </div>
           </td>
         </tr>
-      <% end %>
-                
-        
-
+             <% end %>   
+       
 
       </div>
     </div>

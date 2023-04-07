@@ -6,14 +6,14 @@
 
   font-family: "Times New Roman", Times, serif;
 }
-em{
-  background-color: yellow;
-}
 .a{
   opacity: 0.8;
   width: 100%;
   height: 100vh;  
   background-size: cover;
+}
+em{
+  background: yellow;
 }
 header {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -32,6 +32,28 @@ header {
   align-items: center;
   justify-content: space-between;
   height: var(--header-height);
+}
+.header .menu .drawer input {
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.1s linear;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  color: black;
+  font-size: 18px;
+}
+input{
+  float: left;
+}
+input{
+  border: none;
+}
+.header .menu .drawer input:hover {
+  background: #f3f3f3;
+}
+.header .menu .drawer input:active {
+  background: #e0e0e0;
 }
 .header .menu .drawer {
   display: flex;
@@ -60,25 +82,15 @@ a{
   color:inherit; 
   cursor:pointer;
 }
-button{
-  background-color:transparent; 
-  color:inherit; 
-  border-width:0; 
-  padding:0; cursor:pointer;
-}
 
 h3{
+
   margin:0; 
   font-size:inherit; 
   font-weight:inherit;
 }
-
-span{
-  margin-left: 10px;
-}
-
 p{
-
+  line-height: 1rem;
   text-indent: 30px;
   width: 100%;
   font-size: 15px;
@@ -89,25 +101,26 @@ body {
   font-size: 14px;
   background: #e3f6f5 !important; 
 }
-
-main {
-  position: absolute;
-  grid-template-columns: 146px 640px auto;
-  grid-template-rows: auto;
-}
 #main {
+
   grid-area: main;
 }
-
 .search-results-block {
-
-  padding-top: 8px;
+  padding-top: 10px;
 }
 
 .search-result {
   margin-bottom: 28px;
+/* border-bottom: ridge rgb(255, 255, 255,0.5); */
 }
+.search-result h3{
+  padding-left: 10px;
+  border-radius: 1px;
+  border-left: 4mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 51, 0, 0.5);
+  border-top: 1mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 41, 0, 0.00);
+  border-bottom: 1mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 41, 0, 0.0);
 
+}
 .search-result a {
   display: inline-block;
   color: #1a0dab;
@@ -124,15 +137,19 @@ main {
 h3 {
   color: black;
   margin-top: 4px;
-  font-size: 25px;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
-
 .result-text {
+
+  font-size: 1.2rem;
+  word-spacing:2px;
+  color: white;
   margin-top: 3px;
   line-height: 1.57;
   color: #3C4043;
 }
+
 tr {
   width: 100%; 
   vertical-align: top;

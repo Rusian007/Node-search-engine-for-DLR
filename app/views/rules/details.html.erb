@@ -1,43 +1,47 @@
-<header>
-  <div class="header">
-    <div class="logo"></div>
-    <nav class="menu">
-      <div class="drawer">
-        <a href="/">Search</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </div>
-</header>
+<div class="a">  
+  <header>
+    <div class="header">
 
+      <div class="logo"></div>
+      <nav class="menu">
+        <div class="drawer">
+          <input type="text" placeholder="Search..">
+          <!--<a href="#contact">About</a>-->
+        </div>
+      </nav>
 
-<div id="page-content1" class="content1">
-    <div id="home1" class="content-title1">
-      <h2> <a href="/context/<%= @rules_id %>/<%= @details["section_id"] %>">
-        <%= @details["title"] %>
-      </a> </h2>
     </div>
+  </header>
 
-  <% @details["section_text"].each do |text| %>
-  <div id="home-div1">
-    
-    <article>
-      <div class="article-tags">
-     
 
-      <% if @details["year"].present? %>
-        <h4 class="year round"><%= @details["year"] %></h4>
+  <div id="page-content1" class="content1">
+
+    <div id="home-div1">
+
+      <div id="home1" class="content-title1">
+        <a href="/context/<%= @rules_id %>/<%= @details["section_id"] %>">
+          <h2><%= @details["title"] %></h2>
+        </a>
+      </div> 
+
+      <% @details["section_text"].each do |text| %>
+      <article>
+
+        <div class="article-tags">
+          <% if @details["year"].present? %>
+             <h4 class="year round"><%= @details["year"] %></h4>
+          <% end %>    
+
+          <% if @details["subsection"].present? %>
+             <h4 class="subsection round"><%= @details["subsection"] %></h4>
+          <% end %>
+        </div>
+
+        <p><%= text.html_safe %></p>
+
+      </article>
       <% end %>
 
-      <% if @details["subsection"].present? %>
-        <h5 class="subsection round"><%= @details["subsection"] %></h5>
-         <% end %>
-      </div>
-      <p>
-      <%= text.html_safe %>
-      </p>
-    </article>
+    </div>
   </div>
-
-  <% end %>
 </div>
