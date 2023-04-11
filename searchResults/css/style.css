@@ -42,15 +42,18 @@ header {
   font-size: 18px;
 }
 input{
+  color:white;
   float: left;
 }
 input{
   border: none;
 }
 .header .menu .drawer input:hover {
-  background: #f3f3f3;
+  color: white;
+  background: #e0f0ea;
 }
 .header .menu .drawer input:active {
+  color:white;
   background: #e0e0e0;
 }
 .header .menu .drawer {
@@ -68,13 +71,6 @@ input{
   font-size: 18px;
 }
 
-.header .menu .drawer a:hover {
-  background: #f3f3f3;
-}
-
-.header .menu .drawer a:active {
-  background: #e0e0e0;
-}
 a{
   text-decoration:none; 
   color:inherit; 
@@ -97,7 +93,7 @@ p{
 body {
   font-family: arial,sans-serif;
   font-size: 14px;
-  background: #e3f6f5 !important; 
+    background: linear-gradient(#e0f0ea,#95adbe);
 }
 #main {
 
@@ -109,14 +105,13 @@ body {
 
 .search-result {
   margin-bottom: 28px;
-/* border-bottom: ridge rgb(255, 255, 255,0.5); */
 }
 .search-result h3{
   padding-left: 10px;
   border-radius: 1px;
-  border-left: 4mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 51, 0, 0.5);
-  border-top: 1mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 41, 0, 0.00);
-  border-bottom: 1mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 41, 0, 0.0);
+  border-left: 4mm ridge rgba(60, 42, 77, 0.5);
+  border-top: 2mm ridge rgba(0, 41, 0, 0.00);
+  border-bottom: 2mm ridge rgba(0, 41, 0, 0.0);
 
 }
 .search-result a {
@@ -125,6 +120,7 @@ body {
 }
 
 .search-result > a:hover h3 {
+  color:#3c2a4d;
   text-decoration: underline;
 }
 

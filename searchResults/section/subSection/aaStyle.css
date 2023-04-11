@@ -48,7 +48,8 @@ header {
 }
 
 .header .menu .drawer a:hover {
-  background: #f3f3f3;
+    color: white;
+  background:#574f7d;
 }
 .header .menu .drawer a:active {
   background: #e0e0e0;
@@ -75,7 +76,7 @@ p{
 body {
   font-family: arial,sans-serif;
   font-size: 14px;
-  background: #e3f6f5 !important; 
+    background: linear-gradient(#e0f0ea,#95adbe);
 }
 
 .content1{

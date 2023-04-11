@@ -56,13 +56,15 @@ header {
 }
 
 .header .menu .drawer a:hover {
-  background: #f3f3f3;
+    color: white;
+  background: #e0f0ea;
 }
 .header .menu .drawer a:active {
   background: #e0e0e0;
 }
 .header .menu .drawer input:hover {
-  background: #f3f3f3;
+    color: white;
+  background: #e0f0ea;
 }
 .header .menu .drawer input:active {
   background: #e0e0e0;
@@ -76,6 +78,7 @@ input{
   border: none;
 }
 .content-title1 > a:hover h2 {
+    color:#3c2a4d;
   text-decoration: underline;
 }
 p{
@@ -88,7 +91,7 @@ p{
 body {
   font-family: arial,sans-serif;
   font-size: 14px;
-  background: #e3f6f5 !important; 
+    background: linear-gradient(#e0f0ea,#95adbe);
 }
 
 .content1{
@@ -123,8 +126,9 @@ h4.year{
     font-weight: bold;
 }
 .article-tags .year{ 
+
   border-radius: 10px;
-  border: 1.5mm ridge /*rgba(211, 220, 50, .6)*/rgba(0, 51, 0, 0.5);
+  border: 1.5mm ridge rgba(60, 42, 77, 0.5);
   color: black;
   padding: 8px 5px;
   margin: 10px;
@@ -147,7 +151,6 @@ h4.year{
 article {
   text-align: start;
   padding: 10px;
-
 }
 
 #home-div1{
