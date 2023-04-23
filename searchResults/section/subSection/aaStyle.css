@@ -13,6 +13,7 @@
   background-size: cover;
 }
 header {
+  border-bottom: solid black;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: -webkit-sticky;
   position: sticky;
@@ -48,8 +49,9 @@ header {
 }
 
 .header .menu .drawer a:hover {
-    color: white;
-  background:#574f7d;
+ color: white;
+ background:#574f7d;
+ border-right: solid black;
 }
 .header .menu .drawer a:active {
   background: #e0e0e0;
@@ -76,7 +78,7 @@ p{
 body {
   font-family: arial,sans-serif;
   font-size: 14px;
-    background: linear-gradient(#e0f0ea,#95adbe);
+    background: #FFFAF0;
 }
 
 .content1{

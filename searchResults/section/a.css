@@ -7,12 +7,13 @@
   font-family: "Times New Roman", Times, serif;
 }
 .a{
-  opacity: 0.8;
+  opacity: 0.9;
   width: 100%;
   height: 100vh;  
   background-size: cover;
 }
 header {
+  border-bottom: solid black;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: -webkit-sticky;
   position: sticky;
@@ -31,6 +32,8 @@ header {
   height: var(--header-height);
 }
 .header .menu .drawer input {
+  border: none;
+  outline: none;
   text-transform: capitalize;
   transition: all 0.1s linear;
   display: flex;
@@ -55,19 +58,17 @@ header {
   font-size: 18px;
 }
 
-.header .menu .drawer a:hover {
-    color: white;
-  background: #e0f0ea;
-}
-.header .menu .drawer a:active {
-  background: #e0e0e0;
-}
 .header .menu .drawer input:hover {
-    color: white;
-  background: #e0f0ea;
+  border-right: solid black;
+  border-left: solid black;
+  color: ;
+  background: ;
 }
 .header .menu .drawer input:active {
-  background: #e0e0e0;
+  border-right: solid black;
+  border-left: solid black;
+  color:;
+  background: ;
 }
 a{
   text-decoration:none; 
@@ -78,7 +79,7 @@ input{
   border: none;
 }
 .content-title1 > a:hover h2 {
-    color:#3c2a4d;
+  color:#00004d;
   text-decoration: underline;
 }
 p{
@@ -91,7 +92,7 @@ p{
 body {
   font-family: arial,sans-serif;
   font-size: 14px;
-    background: linear-gradient(#e0f0ea,#95adbe);
+  background: #FFFAF0;
 }
 
 .content1{
@@ -109,6 +110,7 @@ h2{
 }
 
 .article-tags{
+
   display: flex;
   flex-direction: row;
   padding: 5px;
@@ -123,12 +125,13 @@ h4{
   padding: 0px;
 }
 h4.year{
-    font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 1rem;
+  font-weight: 900;
 }
 .article-tags .year{ 
-
   border-radius: 10px;
-  border: 1.5mm ridge rgba(60, 42, 77, 0.5);
+  border: 1mm ridge rgba(0, 0, 0, 0.5);
   color: black;
   padding: 8px 5px;
   margin: 10px;

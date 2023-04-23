@@ -7,13 +7,14 @@
   font-family: "Times New Roman", Times, serif;
 }
 .a{
-  opacity: 0.8;
+  opacity: 0.9;
   width: 100%;
   height: 100vh;  
   background-size: cover;
 }
 
 header {
+   border-bottom: solid black;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: -webkit-sticky;
   position: sticky;
@@ -32,6 +33,7 @@ header {
   height: var(--header-height);
 }
 .header .menu .drawer input {
+  outline: none;
   border: none;
   text-transform: capitalize;
   transition: all 0.1s linear;
@@ -41,20 +43,18 @@ header {
   color: black;
   font-size: 18px;
 }
-input{
-  color:white;
-  float: left;
-}
-input{
-  border: none;
-}
+
 .header .menu .drawer input:hover {
-  color: white;
-  background: #e0f0ea;
+  border-right: solid black;
+  border-left: solid black;
+  color: ;
+  background: ;
 }
 .header .menu .drawer input:active {
-  color:white;
-  background: #e0e0e0;
+  border-right: solid black;
+  border-left: solid black;
+  color:;
+  background: ;
 }
 .header .menu .drawer {
   display: flex;
@@ -93,7 +93,7 @@ p{
 body {
   font-family: arial,sans-serif;
   font-size: 14px;
-    background: linear-gradient(#e0f0ea,#95adbe);
+  background: #FFFAF0;
 }
 #main {
 
@@ -105,22 +105,24 @@ body {
 
 .search-result {
   margin-bottom: 28px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .search-result h3{
   padding-left: 10px;
   border-radius: 1px;
-  border-left: 4mm ridge rgba(60, 42, 77, 0.5);
-  border-top: 2mm ridge rgba(0, 41, 0, 0.00);
-  border-bottom: 2mm ridge rgba(0, 41, 0, 0.0);
+  border-left: 3mm ridge rgba(0, 0, 0, 0.5);
+  border-top: 3mm ridge rgba(0, 41, 0, 0.00);
+  border-bottom: 3mm ridge rgba(0, 41, 0, 0.0);
 
 }
 .search-result a {
   display: inline-block;
-  color: #1a0dab;
+  background: none;
 }
 
 .search-result > a:hover h3 {
-  color:#3c2a4d;
+  color:#00004d;
   text-decoration: underline;
 }
 
@@ -136,9 +138,9 @@ h3 {
 }
 .result-text {
 
-  font-size: 1.2rem;
+  font-size: 17px;
   word-spacing:2px;
-  color: white;
+  color: black;
   margin-top: 3px;
   line-height: 1.57;
   color: #3C4043;
