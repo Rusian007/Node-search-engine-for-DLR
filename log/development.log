@@ -8357,3 +8357,496 @@ Processing by RulesController#index as HTML
 Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 2246)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-26 11:14:31 +0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1452)
+  Rendered layout layouts/application.html.erb (Duration: 243.2ms | Allocations: 21167)
+Completed 200 OK in 249ms (Views: 246.1ms | ActiveRecord: 0.0ms | Allocations: 24515)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-26 11:15:01 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 447)
+  Rendered layout layouts/application.html.erb (Duration: 84.7ms | Allocations: 6405)
+Completed 200 OK in 86ms (Views: 85.6ms | ActiveRecord: 0.0ms | Allocations: 6659)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-26 11:15:47 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 430)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 6285)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms | Allocations: 6500)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-26 11:16:24 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 403)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 6255)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 6466)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-26 11:16:40 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 409)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1610)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1821)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-26 11:18:37 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 427)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 6340)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.0ms | Allocations: 6555)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-26 11:18:53 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 412)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 6265)
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 6476)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-04-26 11:20:08 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"abdul"}
+  [1m[33mSection Search (462.3ms)[0m  sections_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"abdul","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"highlight":{"fields":{"*.analyzed":{}},"fragment_size":0},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mSection Load (19.6ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 52], ["id", 56], ["id", 62], ["id", 50], ["id", 48], ["id", 113], ["id", 89], ["id", 130], ["id", 51], ["id", 67], ["id", 79], ["id", 88], ["id", 27], ["id", 66], ["id", 77], ["id", 33], ["id", 37], ["id", 45], ["id", 24], ["id", 34], ["id", 43], ["id", 100], ["id", 59], ["id", 72], ["id", 111], ["id", 86], ["id", 95], ["id", 98], ["id", 123], ["id", 118], ["id", 63]]
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (0.3ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 10], ["id", 11], ["id", 13], ["id", 14], ["id", 17], ["id", 19], ["id", 20], ["id", 21], ["id", 23], ["id", 25], ["id", 26], ["id", 31], ["id", 32], ["id", 35], ["id", 37]]
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (0.2ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 88.2ms | Allocations: 620)
+  Rendered layout layouts/application.html.erb (Duration: 96.6ms | Allocations: 1968)
+Completed 200 OK in 5907ms (Views: 98.5ms | Searchkick: 462.3ms | ActiveRecord: 22.4ms | Allocations: 68874)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-04-26 11:20:48 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"abdul"}
+  [1m[33mSection Search (60.0ms)[0m  sections_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"abdul","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"highlight":{"fields":{"*.analyzed":{}},"fragment_size":0},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mSection Load (0.3ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 52], ["id", 56], ["id", 62], ["id", 50], ["id", 48], ["id", 113], ["id", 89], ["id", 130], ["id", 51], ["id", 67], ["id", 79], ["id", 88], ["id", 27], ["id", 66], ["id", 77], ["id", 33], ["id", 37], ["id", 45], ["id", 24], ["id", 34], ["id", 43], ["id", 100], ["id", 59], ["id", 72], ["id", 111], ["id", 86], ["id", 95], ["id", 98], ["id", 123], ["id", 118], ["id", 63]]
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (0.2ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 10], ["id", 11], ["id", 13], ["id", 14], ["id", 17], ["id", 19], ["id", 20], ["id", 21], ["id", 23], ["id", 25], ["id", 26], ["id", 31], ["id", 32], ["id", 35], ["id", 37]]
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 0.2ms | Allocations: 98)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 6052)
+Completed 200 OK in 155ms (Views: 9.5ms | Searchkick: 60.0ms | ActiveRecord: 2.0ms | Allocations: 27911)
+
+
+Started GET "/rules/32" for 127.0.0.1 at 2023-04-26 11:21:13 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"32"}
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.0ms | Allocations: 305)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/rules_controller.rb:45:in `details'
+Started GET "/rules/17" for 127.0.0.1 at 2023-04-26 11:21:16 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"17"}
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms | Allocations: 306)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/rules_controller.rb:45:in `details'
+Started GET "/" for 127.0.0.1 at 2023-04-26 11:22:48 +0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1551)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 13036)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 16384)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-04-26 11:22:50 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"abdul"}
+  [1m[33mSection Search (88.1ms)[0m  sections_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"abdul","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"highlight":{"fields":{"*.analyzed":{}},"fragment_size":0},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mSection Load (0.4ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 52], ["id", 56], ["id", 62], ["id", 50], ["id", 48], ["id", 113], ["id", 89], ["id", 130], ["id", 51], ["id", 67], ["id", 79], ["id", 88], ["id", 27], ["id", 66], ["id", 77], ["id", 33], ["id", 37], ["id", 45], ["id", 24], ["id", 34], ["id", 43], ["id", 100], ["id", 59], ["id", 72], ["id", 111], ["id", 86], ["id", 95], ["id", 98], ["id", 123], ["id", 118], ["id", 63]]
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (0.2ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 10], ["id", 11], ["id", 13], ["id", 14], ["id", 17], ["id", 19], ["id", 20], ["id", 21], ["id", 23], ["id", 25], ["id", 26], ["id", 31], ["id", 32], ["id", 35], ["id", 37]]
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (0.2ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+Dalli::Server#connect localhost:11211
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 0.7ms | Allocations: 611)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1948)
+Completed 200 OK in 173ms (Views: 2.9ms | Searchkick: 88.1ms | ActiveRecord: 3.1ms | Allocations: 68924)
+
+
+Started GET "/rules/17" for 127.0.0.1 at 2023-04-26 11:22:52 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"17"}
+  Rendering layout layouts/application.html.erb
+  Rendering rules/details.html.erb within layouts/application
+  Rendered rules/details.html.erb within layouts/application (Duration: 22.4ms | Allocations: 505)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 1927)
+Completed 200 OK in 34ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 2508)
+
+
+Started GET "/rules/17" for 127.0.0.1 at 2023-04-26 11:23:32 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"17"}
+  Rendering layout layouts/application.html.erb
+  Rendering rules/details.html.erb within layouts/application
+  Rendered rules/details.html.erb within layouts/application (Duration: 0.2ms | Allocations: 53)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 6411)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 6867)
+
+
+Started GET "/context/17/[52,%2056,%2062,%2050,%2048,%2051,%2059,%2063]" for 127.0.0.1 at 2023-04-26 11:23:39 +0600
+Processing by RulesController#context as HTML
+  Parameters: {"rule_id"=>"17", "section_id"=>"[52, 56, 62, 50, 48, 51, 59, 63]"}
+  [1m[36mRule Load (0.3ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/rules_controller.rb:58:in `context'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/context.html.erb within layouts/application
+  [1m[36mSection Load (13.0ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."rule_id" = ?[0m  [["rule_id", 17]]
+  ↳ app/views/rules/context.html.erb:27
+  Rendered rules/context.html.erb within layouts/application (Duration: 52.5ms | Allocations: 2868)
+  Rendered layout layouts/application.html.erb (Duration: 83.8ms | Allocations: 4422)
+Completed 200 OK in 130ms (Views: 71.9ms | ActiveRecord: 13.3ms | Allocations: 7593)
+
+
+Started GET "/context/17/[52,%2056,%2062,%2050,%2048,%2051,%2059,%2063]" for 127.0.0.1 at 2023-04-26 11:23:55 +0600
+Processing by RulesController#context as HTML
+  Parameters: {"rule_id"=>"17", "section_id"=>"[52, 56, 62, 50, 48, 51, 59, 63]"}
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/rules_controller.rb:58:in `context'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/context.html.erb within layouts/application
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."rule_id" = ?[0m  [["rule_id", 17]]
+  ↳ app/views/rules/context.html.erb:27
+  Rendered rules/context.html.erb within layouts/application (Duration: 2.5ms | Allocations: 950)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 7035)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.3ms | Allocations: 7786)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-26 11:23:59 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 436)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1637)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 1848)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-26 11:24:38 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 415)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 6207)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 6424)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-04-26 11:24:57 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"abdul"}
+  [1m[33mSection Search (58.2ms)[0m  sections_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"abdul","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"highlight":{"fields":{"*.analyzed":{}},"fragment_size":0},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mSection Load (0.4ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 52], ["id", 56], ["id", 62], ["id", 50], ["id", 48], ["id", 113], ["id", 89], ["id", 130], ["id", 51], ["id", 67], ["id", 79], ["id", 88], ["id", 27], ["id", 66], ["id", 77], ["id", 33], ["id", 37], ["id", 45], ["id", 24], ["id", 34], ["id", 43], ["id", 100], ["id", 59], ["id", 72], ["id", 111], ["id", 86], ["id", 95], ["id", 98], ["id", 123], ["id", 118], ["id", 63]]
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (0.3ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 10], ["id", 11], ["id", 13], ["id", 14], ["id", 17], ["id", 19], ["id", 20], ["id", 21], ["id", 23], ["id", 25], ["id", 26], ["id", 31], ["id", 32], ["id", 35], ["id", 37]]
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.2ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (0.1ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 0.6ms | Allocations: 98)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1300)
+Completed 200 OK in 97ms (Views: 2.6ms | Searchkick: 58.2ms | ActiveRecord: 2.2ms | Allocations: 23116)
+
+
+Started GET "/rules/32" for 127.0.0.1 at 2023-04-26 11:25:07 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"32"}
+  Rendering layout layouts/application.html.erb
+  Rendering rules/details.html.erb within layouts/application
+  Rendered rules/details.html.erb within layouts/application (Duration: 0.2ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1393)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 1874)
+
+
+Started GET "/context/32/[113]" for 127.0.0.1 at 2023-04-26 11:25:11 +0600
+Processing by RulesController#context as HTML
+  Parameters: {"rule_id"=>"32", "section_id"=>"[113]"}
+  [1m[36mRule Load (0.3ms)[0m  [1m[34mSELECT "rules".* FROM "rules" WHERE "rules"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rules_controller.rb:58:in `context'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/context.html.erb within layouts/application
+  [1m[36mSection Load (0.3ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."rule_id" = ?[0m  [["rule_id", 32]]
+  ↳ app/views/rules/context.html.erb:27
+  Rendered rules/context.html.erb within layouts/application (Duration: 5.5ms | Allocations: 672)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 2048)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 0.6ms | Allocations: 2750)
+
+
