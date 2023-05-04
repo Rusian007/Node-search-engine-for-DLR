@@ -14,7 +14,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: sql12616041
-  password: tCZ3v9vr2B
+  password: <%= ENV["DATABASE_PASSWORD"] %>
   host: sql12.freesqldatabase.com
 
 development:
