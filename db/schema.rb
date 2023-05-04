@@ -11,19 +11,19 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_03_01_161348) do
-  create_table "rules", force: :cascade do |t|
+  create_table "rules", charset: "latin1", force: :cascade do |t|
     t.text "title"
     t.string "subsection"
     t.integer "year"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
-  create_table "sections", force: :cascade do |t|
+  create_table "sections", charset: "latin1", force: :cascade do |t|
     t.text "section_text"
-    t.integer "rule_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.bigint "rule_id", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["rule_id"], name: "index_sections_on_rule_id"
   end
 
