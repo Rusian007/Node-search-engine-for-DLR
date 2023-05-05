@@ -10,8 +10,11 @@
     <div class="logo">     </div>
       <nav class="menu">
         <div class="drawer">
-          <!--<a href="#about">About</a>-->
-          <input type="text" placeholder="Search..">
+
+        <%= form_tag search_query_path, method: :post do %>
+          <%= text_field_tag :q, nil, placeholder: "Search Here ..." %>
+        <% end %>
+        
          
 
         </div>
@@ -49,9 +52,13 @@
                 <p class="result-text">
                     <% for section in rule[1][:highlighted] %>
 
+                    <% if section %>
+
                     <span >
                      <%= section.html_safe %> 
                     </span>
+
+                    <% end %>
                  <% end %>
                 </p>
             </div>

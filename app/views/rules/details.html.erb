@@ -5,7 +5,9 @@
       <div class="logo"></div>
       <nav class="menu">
         <div class="drawer">
-          <input type="text" placeholder="Search..">
+        <%= form_tag search_query_path, method: :post do %>
+          <%= text_field_tag :q, nil, placeholder: "Search Here ..." %>
+        <% end %>
           <!--<a href="#contact">About</a>-->
         </div>
       </nav>

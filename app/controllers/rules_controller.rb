@@ -17,8 +17,11 @@ class RulesController < ApplicationController
 
     if params[:q].present? 
 
-  		# @rules = Rule.search(params[:q])
-  		@rules = Section.search_sections(params[:q])
+  		if params[:q].include?('"')
+        @rules = Section.search_sections_exact(params[:q])
+      else
+        @rules = Section.search_sections(params[:q])
+      end
       
       results = Rules_helper.new
    
