@@ -12,6 +12,8 @@ class Rule < ApplicationRecord
 		result_array = []
 	  	search_results = Rule.search(query)
 	
+	
+
 	 	search_results.each do |rule|
 		 
 			

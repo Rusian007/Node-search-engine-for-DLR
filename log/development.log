@@ -14206,3 +14206,158 @@ Processing by RulesController#index as HTML
 Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 1836)
 
 
+Started GET "/" for 127.0.0.1 at 2023-05-06 22:58:17 +0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (54.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1450)
+  Rendered layout layouts/application.html.erb (Duration: 71.1ms | Allocations: 6313)
+Completed 200 OK in 81ms (Views: 76.2ms | ActiveRecord: 0.0ms | Allocations: 9657)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 22:58:32 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/criminal"}
+  [1m[33mRule Search (2153.2ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (92.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (24, 25)[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  [1m[36mRule Load (141.3ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 24 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  [1m[36mRule Load (57.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 25 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 26.6ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 2238)
+Completed 200 OK in 3018ms (Views: 35.2ms | Searchkick: 2153.2ms | ActiveRecord: 572.0ms | Allocations: 29823)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 22:59:33 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/criminal"}
+  [1m[33mRule Search (1285.9ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (58.2ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (24, 25)[0m
+  ↳ app/models/rule.rb:15:in `puts'
+  [1m[36mRule Load (55.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 24 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  [1m[36mRule Load (54.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 25 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 1.6ms | Allocations: 319)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 1691)
+Completed 200 OK in 1718ms (Views: 12.2ms | Searchkick: 1285.9ms | ActiveRecord: 338.8ms | Allocations: 10980)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 23:04:57 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/criminal"}
+  [1m[33mRule Search (1270.2ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (56.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (24, 25)[0m
+  ↳ app/models/rule.rb:17:in `search_rules'
+Completed 500 Internal Server Error in 1582ms (Searchkick: 1270.2ms | ActiveRecord: 221.3ms | Allocations: 9729)
+
+
+  
+NoMethodError (undefined method `_score' for #<Rule id: 24, title: "Code of Criminal Procedure(V of 1898)", subsection: "", year: 1991, created_at: "2023-05-04 17:43:29.000000000 +0000", updated_at: "2023-05-04 17:43:29.000000000 +0000">):
+  
+app/models/rule.rb:19:in `block in search_rules'
+app/models/rule.rb:17:in `search_rules'
+app/controllers/rules_controller.rb:26:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 23:08:18 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/criminal"}
+  [1m[33mRule Search (1329.2ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (55.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (24, 25)[0m
+  ↳ app/models/rule.rb:17:in `search_rules'
+Completed 500 Internal Server Error in 1640ms (Searchkick: 1329.2ms | ActiveRecord: 221.2ms | Allocations: 9593)
+
+
+  
+NoMethodError (undefined method `_score' for #<Rule id: 24, title: "Code of Criminal Procedure(V of 1898)", subsection: "", year: 1991, created_at: "2023-05-04 17:43:29.000000000 +0000", updated_at: "2023-05-04 17:43:29.000000000 +0000">):
+  
+app/models/rule.rb:19:in `block in search_rules'
+app/models/rule.rb:17:in `search_rules'
+app/controllers/rules_controller.rb:26:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 23:09:11 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/criminal"}
+  [1m[33mRule Search (2376.6ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (56.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (24, 25)[0m
+  ↳ app/models/rule.rb:17:in `search_rules'
+Completed 500 Internal Server Error in 2699ms (Searchkick: 2376.6ms | ActiveRecord: 226.3ms | Allocations: 9516)
+
+
+  
+NoMethodError (undefined method `_searchkick_score' for #<Rule id: 24, title: "Code of Criminal Procedure(V of 1898)", subsection: "", year: 1991, created_at: "2023-05-04 17:43:29.000000000 +0000", updated_at: "2023-05-04 17:43:29.000000000 +0000">):
+  
+app/models/rule.rb:19:in `block in search_rules'
+app/models/rule.rb:17:in `search_rules'
+app/controllers/rules_controller.rb:26:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 23:11:59 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/criminal"}
+  [1m[33mRule Search (1243.0ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (54.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (24, 25)[0m
+  ↳ app/models/rule.rb:14:in `search_rules'
+  [1m[36mRule Load (53.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 24 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  [1m[36mRule Load (59.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 25 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 1.9ms | Allocations: 319)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 1708)
+Completed 200 OK in 1670ms (Views: 12.1ms | Searchkick: 1243.0ms | ActiveRecord: 332.1ms | Allocations: 11004)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 23:13:38 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/criminal"}
+  [1m[33mRule Search (3003.2ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (52.4ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (24, 25)[0m
+  ↳ app/models/rule.rb:16:in `search_rules'
+  [1m[36mRule Load (51.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 24 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  [1m[36mRule Load (52.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 25 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 2.6ms | Allocations: 319)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 1690)
+Completed 200 OK in 3433ms (Views: 15.5ms | Searchkick: 3003.2ms | ActiveRecord: 331.3ms | Allocations: 10988)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 23:19:56 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/criminal"}
+  [1m[33mRule Search (2919.3ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (51.2ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (24, 25)[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+Completed 500 Internal Server Error in 3316ms (Searchkick: 2919.3ms | ActiveRecord: 110.3ms | Allocations: 9337)
+
+
+  
+NoMethodError (undefined method `score' for #<Rule id: 24, title: "Code of Criminal Procedure(V of 1898)", subsection: "", year: 1991, created_at: "2023-05-04 17:43:29.000000000 +0000", updated_at: "2023-05-04 17:43:29.000000000 +0000">):
+  
+app/models/rule.rb:16:in `block in search_rules'
+app/models/rule.rb:15:in `search_rules'
+app/controllers/rules_controller.rb:26:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 23:27:11 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/criminal"}
+  [1m[33mRule Search (1268.1ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"criminal","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (53.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (24, 25)[0m
+  ↳ app/models/rule.rb:16:in `search_rules'
+  [1m[36mRule Load (51.2ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 24 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  [1m[36mRule Load (50.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 25 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 0.5ms | Allocations: 319)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1690)
+Completed 200 OK in 1750ms (Views: 3.3ms | Searchkick: 1268.1ms | ActiveRecord: 205.9ms | Allocations: 10737)
+
+
