@@ -28,6 +28,8 @@
         <article>
 
           <p>
+          <% if @section_ids %>
+          
             <% # Check if the section's id is present in the section_ids array %>
             <% if @section_ids.include?(section.id) %>
           
@@ -38,6 +40,10 @@
      
             <%= section.section_text %>
              <% end %>
+
+          <% else %>
+          <%= section.section_text %>
+          <% end %>
         </p>
 
          </article>

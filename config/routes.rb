@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   get 'upload', to:'rules#upload', as: :search_upload
   post 'upload', to: 'rules#upload'
   get 'reindex', to: 'rules#reindex'
-  get 'context/:rule_id/:section_id', to: 'rules#context'
+  get 'context/:rule_id/:section_id', to: 'rules#context' , as: :context
 end

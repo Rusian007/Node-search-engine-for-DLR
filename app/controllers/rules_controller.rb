@@ -19,10 +19,22 @@ class RulesController < ApplicationController
 
   		if params[:q].include?('"')
         @rules = Section.search_sections_exact(params[:q])
+
+      elsif (params[:q].include?('/'))
+        # Take user query
+        query = params[:q].split("/")[1]
+        @rules = Rule.search_rules(query)
+        # Now call hash function designed for rules
+        helper = Rules_helper.new
+        @rules = helper.make_results_hash_rules(@rules)
+        @check = true
+        render :search
+        return 
+     
       else
         @rules = Section.search_sections(params[:q])
       end
-      
+     
       results = Rules_helper.new
    
       @rules = results.make_results_hash(@rules)
@@ -43,9 +55,15 @@ class RulesController < ApplicationController
 
   def details
     id = params[:id]
-    
-     results = Rails.cache.read('results')
+    begin
+      results = Rails.cache.read('results')
       results = JSON.parse(results)
+    rescue 
+     
+      redirect_to context_url( id, "NIL")
+      return
+    end
+     
      # change to sqLite
 
     @details = results["results"][id]
@@ -56,7 +74,11 @@ class RulesController < ApplicationController
   def context
     # This comes after details and shows entire sections 
     rule_id = params[:rule_id]
-    @section_ids = JSON.parse(params[:section_id])
+    if params[:section_id] != "NIL"
+      @section_ids = JSON.parse(params[:section_id])
+    else
+      @section_ids = nil
+    end
 
     @rule = Rule.find(rule_id)
     @sections = @rule.sections

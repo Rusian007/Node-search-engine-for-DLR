@@ -13164,3 +13164,1045 @@ Processing by RulesController#context as HTML
 Completed 200 OK in 444ms (Views: 12.4ms | ActiveRecord: 204.7ms | Allocations: 2781)
 
 
+Started GET "/" for 127.0.0.1 at 2023-05-06 17:28:17 +0600
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: sql12616041.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.0.4.3) lib/active_record/connection_adapters/mysql2_adapter.rb:49:in `rescue in new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-05-06 17:28:54 +0600
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: sql12616041.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.0.4.3) lib/active_record/connection_adapters/mysql2_adapter.rb:49:in `rescue in new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-05-06 17:29:06 +0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (59.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/home/rusian/Documents/Search-Engine-ForDLR/app/controllers/rules_controller.rb:40: else without rescue is useless
+  	else
+  	^~~~
+/home/rusian/Documents/Search-Engine-ForDLR/app/controllers/rules_controller.rb:106: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/rules_controller.rb:40: else without rescue is useless
+app/controllers/rules_controller.rb:106: syntax error, unexpected `end', expecting end-of-input
+app/controllers/rules_controller.rb:40: else without rescue is useless
+app/controllers/rules_controller.rb:106: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2023-05-06 17:29:22 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 958)
+  Rendered layout layouts/application.html.erb (Duration: 112.6ms | Allocations: 12102)
+Completed 200 OK in 116ms (Views: 115.1ms | ActiveRecord: 0.0ms | Allocations: 13348)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 17:29:32 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1473)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 1550)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 2249)
+
+
+  
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    23: </header>
+    24: 
+    25: 
+    26:      <% if @rules.empty? %>
+    27:        <div style="text-align: center !important; margin : 0 auto !important;">
+    28:             <h3 >Nothing Found :(</h3>
+    29:        </div>
+  
+app/views/rules/search.html.erb:26
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 17:30:02 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 1.6ms | Allocations: 862)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 947)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2036)
+
+
+  
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    23: </header>
+    24: 
+    25: 
+    26:      <% if @rules.empty? %>
+    27:        <div style="text-align: center !important; margin : 0 auto !important;">
+    28:             <h3 >Nothing Found :(</h3>
+    29:        </div>
+  
+app/views/rules/search.html.erb:26
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 17:31:28 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1478.8ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (57.3ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/controllers/rules_controller.rb:25:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 1.4ms | Allocations: 902)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 986)
+Completed 500 Internal Server Error in 1835ms (ActiveRecord: 210.5ms | Allocations: 27620)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    46:             <div class="search-result">
+    47:               <a href="/rules/<%= rule[0] %>">
+    48:                 <p></p>
+    49:                 <h3><%= rule[1][:title] %></h3>
+    50:               </a>
+    51: 
+    52:                 <p class="result-text">
+  
+app/views/rules/search.html.erb:49
+app/views/rules/search.html.erb:43
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 17:33:51 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1351.2ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (50.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 6.6ms | Allocations: 865)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 949)
+Completed 500 Internal Server Error in 1644ms (ActiveRecord: 208.3ms | Allocations: 9128)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    46:             <div class="search-result">
+    47:               <a href="/rules/<%= rule[0] %>">
+    48:                 <p></p>
+    49:                 <h3><%= rule[1][:title] %></h3>
+    50:               </a>
+    51: 
+    52:                 <p class="result-text">
+  
+app/views/rules/search.html.erb:49
+app/views/rules/search.html.erb:43:in `each'
+app/views/rules/search.html.erb:43
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 17:34:21 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1220.8ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (65.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 2.5ms | Allocations: 865)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 950)
+Completed 500 Internal Server Error in 1546ms (ActiveRecord: 245.2ms | Allocations: 9109)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    46:             <div class="search-result">
+    47:               <a href="/rules/<%= rule[0] %>">
+    48:                 <p></p>
+    49:                 <h3><%= rule[1][:title] %></h3>
+    50:               </a>
+    51: 
+    52:                 <p class="result-text">
+  
+app/views/rules/search.html.erb:49
+app/views/rules/search.html.erb:43:in `each'
+app/views/rules/search.html.erb:43
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 18:31:48 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1535.4ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (52.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+Completed 500 Internal Server Error in 1967ms (Searchkick: 1535.4ms | ActiveRecord: 112.8ms | Allocations: 9392)
+
+
+  
+NoMethodError (undefined method `make_results_hash_rules' for #<RulesController:0x00000000008ed0>):
+  
+app/controllers/rules_controller.rb:25:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 18:32:27 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1294.0ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (56.3ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+Completed 500 Internal Server Error in 1653ms (Searchkick: 1294.0ms | ActiveRecord: 239.2ms | Allocations: 9555)
+
+
+  
+NoMethodError (undefined method `make_results_hash_rules' for #<RulesController:0x00000000009a60>):
+  
+app/controllers/rules_controller.rb:26:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 18:32:43 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"abdul"}
+  [1m[33mSection Search (1327.8ms)[0m  sections_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"abdul","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"abdul","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"highlight":{"fields":{"*.analyzed":{}},"fragment_size":0},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mSection Load (153.0ms)[0m  [1m[34mSELECT `sections`.* FROM `sections` WHERE `sections`.`id` IN (116, 120, 126, 114, 112, 47, 24, 64, 115, 2, 14, 23, 1, 91, 12, 97, 101, 109, 88, 98, 107, 34, 123, 7, 45, 21, 29, 32, 57, 52, 127)[0m
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (62.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (1, 2, 3, 5, 7, 8, 13, 14, 17, 19, 24, 25, 27, 28, 31)[0m
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (56.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (54.2ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 14 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (53.3ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 5 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (53.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 19 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (57.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 2 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 5 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 5 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (53.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (56.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 24 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 5 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 24 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (62.4ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 25 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (58.4ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 28 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 24 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 24 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (60.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 27 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (56.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 8 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (59.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (59.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 5 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (53.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 8 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 19 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (60.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 17 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+Dalli::Server#connect localhost:11211
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 2.1ms | Allocations: 402)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 1787)
+Completed 200 OK in 2839ms (Views: 12.3ms | Searchkick: 1327.8ms | ActiveRecord: 1180.9ms | Allocations: 47390)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 18:33:05 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1196.2ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (55.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+Completed 500 Internal Server Error in 1348ms (Searchkick: 1196.2ms | ActiveRecord: 55.5ms | Allocations: 5361)
+
+
+  
+NoMethodError (undefined method `make_results_hash_rules' for #<RulesController:0x0000000000a208>):
+  
+app/controllers/rules_controller.rb:26:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 18:36:17 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1331.6ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (55.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 1.1ms | Allocations: 865)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 949)
+Completed 500 Internal Server Error in 1635ms (ActiveRecord: 228.6ms | Allocations: 9038)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    46:             <div class="search-result">
+    47:               <a href="/rules/<%= rule[0] %>">
+    48:                 <p></p>
+    49:                 <h3><%= rule[1][:title] %></h3>
+    50:               </a>
+    51: 
+    52:                 <p class="result-text">
+  
+app/views/rules/search.html.erb:49
+app/views/rules/search.html.erb:43:in `each'
+app/views/rules/search.html.erb:43
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 18:38:44 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (2867.1ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (71.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 3.6ms | Allocations: 865)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 949)
+Completed 500 Internal Server Error in 3214ms (ActiveRecord: 259.7ms | Allocations: 9094)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    46:             <div class="search-result">
+    47:               <a href="/rules/<%= rule[0] %>">
+    48:                 <p></p>
+    49:                 <h3><%= rule[1][:title] %></h3>
+    50:               </a>
+    51: 
+    52:                 <p class="result-text">
+  
+app/views/rules/search.html.erb:49
+app/views/rules/search.html.erb:43:in `each'
+app/views/rules/search.html.erb:43
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 18:53:30 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1354.6ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (73.2ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  [1m[36mRule Load (67.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 4.0ms | Allocations: 863)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 947)
+Completed 500 Internal Server Error in 1895ms (ActiveRecord: 196.7ms | Allocations: 9477)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    46:             <div class="search-result">
+    47:               <a href="/rules/<%= rule[0] %>">
+    48:                 <p></p>
+    49:                 <h3><%= rule[1][:title] %></h3>
+    50:               </a>
+    51: 
+    52:                 <p class="result-text">
+  
+app/views/rules/search.html.erb:49
+app/views/rules/search.html.erb:43:in `each'
+app/views/rules/search.html.erb:43
+app/controllers/rules_controller.rb:31:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 18:54:00 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1380.0ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (51.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  [1m[36mRule Load (52.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 3.2ms | Allocations: 863)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 947)
+Completed 500 Internal Server Error in 1811ms (ActiveRecord: 346.4ms | Allocations: 9688)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    46:             <div class="search-result">
+    47:               <a href="/rules/<%= rule[0] %>">
+    48:                 <p></p>
+    49:                 <h3><%= rule[1][:title] %></h3>
+    50:               </a>
+    51: 
+    52:                 <p class="result-text">
+  
+app/views/rules/search.html.erb:49
+app/views/rules/search.html.erb:43:in `each'
+app/views/rules/search.html.erb:43
+app/controllers/rules_controller.rb:31:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 18:56:30 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1349.7ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (51.3ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  [1m[36mRule Load (51.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1438)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 1522)
+Completed 500 Internal Server Error in 1528ms (ActiveRecord: 102.9ms | Allocations: 6171)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    46:             <div class="search-result">
+    47:               <a href="/rules/<%= rule[0] %>">
+    48:                 <p></p>
+    49:                 <h3><%= rule[0][:title] %></h3>
+    50:               </a>
+    51: 
+    52:                 <p class="result-text">
+  
+app/views/rules/search.html.erb:49
+app/views/rules/search.html.erb:43:in `each'
+app/views/rules/search.html.erb:43
+app/controllers/rules_controller.rb:31:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 18:58:43 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1427.5ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (74.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  [1m[36mRule Load (67.4ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1456)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 1540)
+Completed 500 Internal Server Error in 1876ms (ActiveRecord: 353.4ms | Allocations: 10583)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    46:             <div class="search-result">
+    47:               <a href="/rules/<%= rule[0] %>">
+    48:                 <p></p>
+    49:                 <h3><%= rule[1][:title] %></h3>
+    50:               </a>
+    51: 
+    52:                 <p class="result-text">
+  
+app/views/rules/search.html.erb:49
+app/views/rules/search.html.erb:43:in `each'
+app/views/rules/search.html.erb:43
+app/controllers/rules_controller.rb:31:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 18:58:51 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1218.0ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (53.4ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  [1m[36mRule Load (62.3ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 2.9ms | Allocations: 753)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 828)
+Completed 500 Internal Server Error in 1401ms (ActiveRecord: 115.6ms | Allocations: 4723)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    46:             <div class="search-result">
+    47:               <a href="/rules/<%= rule[0] %>">
+    48:                 <p></p>
+    49:                 <h3><%= rule[1][:title] %></h3>
+    50:               </a>
+    51: 
+    52:                 <p class="result-text">
+  
+app/views/rules/search.html.erb:49
+app/views/rules/search.html.erb:43:in `each'
+app/views/rules/search.html.erb:43
+app/controllers/rules_controller.rb:31:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 18:59:16 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1205.0ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (82.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  [1m[36mRule Load (99.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 4.2ms | Allocations: 863)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 947)
+Completed 500 Internal Server Error in 1642ms (ActiveRecord: 361.4ms | Allocations: 9712)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    46:             <div class="search-result">
+    47:               <a href="/rules/<%= rule[0] %>">
+    48:                 <p></p>
+    49:                 <h3><%= rule[1][:title] %></h3>
+    50:               </a>
+    51: 
+    52:                 <p class="result-text">
+  
+app/views/rules/search.html.erb:49
+app/views/rules/search.html.erb:43:in `each'
+app/views/rules/search.html.erb:43
+app/controllers/rules_controller.rb:31:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 18:59:57 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1326.4ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (56.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  [1m[36mRule Load (70.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 4.2ms | Allocations: 868)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 952)
+Completed 500 Internal Server Error in 1718ms (ActiveRecord: 301.0ms | Allocations: 9673)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    50:               </a>
+    51: 
+    52:                 <p class="result-text">
+    53:                     <% for section in rule[1][:highlighted] %>
+    54: 
+    55:                     <% if section %>
+    56: 
+  
+app/views/rules/search.html.erb:53
+app/views/rules/search.html.erb:43:in `each'
+app/views/rules/search.html.erb:43
+app/controllers/rules_controller.rb:31:in `search'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 19:01:21 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1338.1ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (50.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  [1m[36mRule Load (50.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 4.9ms | Allocations: 913)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 2500)
+Completed 200 OK in 1523ms (Views: 20.5ms | Searchkick: 1338.1ms | ActiveRecord: 101.7ms | Allocations: 7169)
+
+
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:01:26 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 237)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/rules_controller.rb:60:in `details'
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:10:37 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 7ms (Allocations: 2477)
+
+
+  
+NoMethodError (undefined method `context_path' for #<RulesController:0x00000000010748>
+Did you mean?  context):
+  
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:12:41 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 6ms (Allocations: 2506)
+
+
+  
+NoMethodError (undefined method `context_url' for #<RulesController:0x00000000011490>
+Did you mean?  context):
+  
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:12:50 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 9ms (Allocations: 2386)
+
+
+  
+NoMethodError (undefined method `context_url' for #<RulesController:0x00000000011648>
+Did you mean?  context):
+  
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:13:41 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 6ms (Allocations: 2504)
+
+
+  
+NoMethodError (undefined method `context_url' for #<RulesController:0x00000000012368>
+Did you mean?  context):
+  
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 19:13:46 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1330.3ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (60.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  [1m[36mRule Load (65.2ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 5.8ms | Allocations: 927)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 2514)
+Completed 200 OK in 1847ms (Views: 20.4ms | Searchkick: 1330.3ms | ActiveRecord: 185.7ms | Allocations: 11249)
+
+
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:13:49 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 2449)
+
+
+  
+NoMethodError (undefined method `context_url' for #<RulesController:0x000000000125e8>
+Did you mean?  context):
+  
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:15:05 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2504)
+
+
+  
+NoMethodError (undefined method `context_route' for #<RulesController:0x00000000013358>
+Did you mean?  context):
+  
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 19:15:15 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1358.8ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:15:17 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 2449)
+
+
+  
+NoMethodError (undefined method `context_route' for #<RulesController:0x000000000135b0>
+Did you mean?  context):
+  
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+  [1m[36mRule Load (63.3ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  [1m[36mRule Load (59.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 3.7ms | Allocations: 315)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 1698)
+Completed 200 OK in 1889ms (Views: 15.3ms | Searchkick: 1358.8ms | ActiveRecord: 361.8ms | Allocations: 195110)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 19:15:37 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/corruption"}
+  [1m[33mRule Search (1374.4ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"corruption","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (68.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  [1m[36mRule Load (65.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 1.6ms | Allocations: 315)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 1686)
+Completed 200 OK in 1816ms (Views: 13.2ms | Searchkick: 1374.4ms | ActiveRecord: 338.4ms | Allocations: 10418)
+
+
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:15:40 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 229)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/rules_controller.rb:74:in `context'
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:17:14 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2508)
+
+
+  
+NoMethodError (undefined method `context_url' for #<RulesController:0x00000000015108>
+Did you mean?  context):
+  
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:18:51 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 289)
+
+
+  
+Errno::ENOENT (No such file or directory - context/11/):
+  
+app/controllers/rules_controller.rb:63:in ``'
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:19:10 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+  
+Errno::ENOENT (No such file or directory - /context/11/):
+  
+app/controllers/rules_controller.rb:63:in ``'
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:19:31 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+  
+Errno::ENOENT (No such file or directory - /context/11/NIL):
+  
+app/controllers/rules_controller.rb:63:in ``'
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:20:22 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+  
+Errno::ENOENT (No such file or directory - http://127.0.0.1:3000/context/11/NIL):
+  
+app/controllers/rules_controller.rb:63:in ``'
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:20:55 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+  
+Errno::ENOENT (No such file or directory - http://127.0.0.1:3000/context/11/NIL):
+  
+app/controllers/rules_controller.rb:63:in ``'
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started GET "/context/11/NIL" for 127.0.0.1 at 2023-05-06 19:21:04 +0600
+Processing by RulesController#context as HTML
+  Parameters: {"rule_id"=>"11", "section_id"=>"NIL"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 119)
+
+
+  
+JSON::ParserError (unexpected token at 'NIL'):
+  
+app/controllers/rules_controller.rb:78:in `context'
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:22:13 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 375)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"context", :controller=>"rules", :rule_id=>"11", :section_id=>nil}, missing required keys: [:section_id]):
+  
+app/controllers/rules_controller.rb:63:in `rescue in details'
+app/controllers/rules_controller.rb:58:in `details'
+Started GET "/rules/11" for 127.0.0.1 at 2023-05-06 19:22:43 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"11"}
+Redirected to http://127.0.0.1:3000/context/11/NIL
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 393)
+
+
+Started GET "/context/11/NIL" for 127.0.0.1 at 2023-05-06 19:22:43 +0600
+Processing by RulesController#context as HTML
+  Parameters: {"rule_id"=>"11", "section_id"=>"NIL"}
+  [1m[36mRule Load (56.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/rules_controller.rb:83:in `context'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/context.html.erb within layouts/application
+  [1m[36mSection Load (77.1ms)[0m  [1m[34mSELECT `sections`.* FROM `sections` WHERE `sections`.`rule_id` = 11[0m
+  ↳ app/views/rules/context.html.erb:27
+  Rendered rules/context.html.erb within layouts/application (Duration: 242.3ms | Allocations: 4713)
+  Rendered layout layouts/application.html.erb (Duration: 243.1ms | Allocations: 4797)
+Completed 500 Internal Server Error in 589ms (ActiveRecord: 432.3ms | Allocations: 14760)
+
+
+  
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+    29: 
+    30:           <p>
+    31:             <% # Check if the section's id is present in the section_ids array %>
+    32:             <% if @section_ids.include?(section.id) %>
+    33:           
+    34:           
+    35:             <%= "<em>#{section.section_text}</em>".html_safe %>
+  
+app/views/rules/context.html.erb:32
+app/views/rules/context.html.erb:27
+Started GET "/context/11/NIL" for 127.0.0.1 at 2023-05-06 19:25:00 +0600
+Processing by RulesController#context as HTML
+  Parameters: {"rule_id"=>"11", "section_id"=>"NIL"}
+  [1m[36mRule Load (56.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/rules_controller.rb:83:in `context'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/context.html.erb within layouts/application
+  [1m[36mSection Load (60.7ms)[0m  [1m[34mSELECT `sections`.* FROM `sections` WHERE `sections`.`rule_id` = 11[0m
+  ↳ app/views/rules/context.html.erb:27
+  Rendered rules/context.html.erb within layouts/application (Duration: 67.7ms | Allocations: 1304)
+  Rendered layout layouts/application.html.erb (Duration: 77.3ms | Allocations: 3149)
+Completed 200 OK in 199ms (Views: 20.6ms | ActiveRecord: 117.2ms | Allocations: 4651)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-06 19:25:22 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 764)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 1965)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 2247)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 19:25:27 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"title/Practice & Procedure"}
+  [1m[33mRule Search (1453.4ms)[0m  rules_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"Practice \u0026 Procedure","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"Practice \u0026 Procedure","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"Practice \u0026 Procedure","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"Practice \u0026 Procedure","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mRule Load (62.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 8[0m
+  ↳ app/models/rule.rb:15:in `search_rules'
+  [1m[36mRule Load (69.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 8 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:54:in `block in make_results_hash_rules'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 3.6ms | Allocations: 805)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2006)
+Completed 200 OK in 1675ms (Views: 11.9ms | Searchkick: 1453.4ms | ActiveRecord: 132.3ms | Allocations: 5942)
+
+
+Started GET "/rules/8" for 127.0.0.1 at 2023-05-06 19:25:31 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"8"}
+Redirected to http://127.0.0.1:3000/context/8/NIL
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 232)
+
+
+Started GET "/context/8/NIL" for 127.0.0.1 at 2023-05-06 19:25:31 +0600
+Processing by RulesController#context as HTML
+  Parameters: {"rule_id"=>"8", "section_id"=>"NIL"}
+  [1m[36mRule Load (76.2ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/rules_controller.rb:83:in `context'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/context.html.erb within layouts/application
+  [1m[36mSection Load (97.6ms)[0m  [1m[34mSELECT `sections`.* FROM `sections` WHERE `sections`.`rule_id` = 8[0m
+  ↳ app/views/rules/context.html.erb:27
+  Rendered rules/context.html.erb within layouts/application (Duration: 101.9ms | Allocations: 801)
+  Rendered layout layouts/application.html.erb (Duration: 109.0ms | Allocations: 2183)
+Completed 200 OK in 249ms (Views: 12.7ms | ActiveRecord: 173.8ms | Allocations: 2915)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-06 19:25:36 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 415)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 1616)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 1827)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-06 19:25:40 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"practice"}
+  [1m[33mSection Search (1366.6ms)[0m  sections_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"practice","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"practice","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"practice","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"practice","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"highlight":{"fields":{"*.analyzed":{}},"fragment_size":0},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mSection Load (73.7ms)[0m  [1m[34mSELECT `sections`.* FROM `sections` WHERE `sections`.`id` IN (85, 32, 57)[0m
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (58.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (8, 19, 24)[0m
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (55.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 24 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (91.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 8 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  [1m[36mRule Load (69.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 19 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:16:in `block in make_results_hash'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 2.1ms | Allocations: 230)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 1431)
+Completed 200 OK in 1819ms (Views: 11.2ms | Searchkick: 1366.6ms | ActiveRecord: 348.3ms | Allocations: 7857)
+
+
+Started GET "/rules/8" for 127.0.0.1 at 2023-05-06 19:25:45 +0600
+Processing by RulesController#details as HTML
+  Parameters: {"id"=>"8"}
+  Rendering layout layouts/application.html.erb
+  Rendering rules/details.html.erb within layouts/application
+  Rendered rules/details.html.erb within layouts/application (Duration: 32.5ms | Allocations: 927)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 2128)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.0ms | Allocations: 2534)
+
+
+Started GET "/context/8/[32]" for 127.0.0.1 at 2023-05-06 19:25:47 +0600
+Processing by RulesController#context as HTML
+  Parameters: {"rule_id"=>"8", "section_id"=>"[32]"}
+  [1m[36mRule Load (53.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/rules_controller.rb:83:in `context'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/context.html.erb within layouts/application
+  [1m[36mSection Load (61.4ms)[0m  [1m[34mSELECT `sections`.* FROM `sections` WHERE `sections`.`rule_id` = 8[0m
+  ↳ app/views/rules/context.html.erb:27
+  Rendered rules/context.html.erb within layouts/application (Duration: 66.9ms | Allocations: 801)
+  Rendered layout layouts/application.html.erb (Duration: 74.8ms | Allocations: 2168)
+Completed 200 OK in 188ms (Views: 15.6ms | ActiveRecord: 115.3ms | Allocations: 2900)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-06 19:25:49 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 424)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 1625)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 1836)
+
+

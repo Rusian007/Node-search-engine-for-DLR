@@ -43,6 +43,39 @@ module RulesHelper
         @results
 		end
 
+    def make_results_hash_rules(rules)
+      
+      rule_hash = {}
+      # Initialize an empty results hash
+      @results = {}
+
+                  # Loop through each hash object in search_results
+      rules.each do |hash_object|
+        rule = Rule.find(hash_object[:id])
+        rule_id = rule.id
+        if @results.key?(rule_id)
+          # If the rule_id exists, append the highlighted section_text to the existing section_text array
+        @results[rule_id][:section_text] <<  nil
+        @results[rule_id][:section_id] << nil
+        @results[rule_id][:highlighted] <<  nil
+        @results[rule_id][:subsection] <<  rule.subsection
+        @results[rule_id][:year] <<  rule.year
+
+        else
+          # If the rule_id doesn't exist, create a new hash object with the title and section_text array
+        @results[rule_id] = { 
+          title: rule.title, 
+          section_text: [nil],
+          section_id: [nil],
+          subsection: rule.subsection,
+          year: rule.year
+        }
+
+        end
+      end
+      @results
+    end
+
     def return_details(id)
     
        @results[id]

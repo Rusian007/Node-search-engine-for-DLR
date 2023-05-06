@@ -50,6 +50,7 @@
               </a>
 
                 <p class="result-text">
+                <% if rule[1][:highlighted] %>
                     <% for section in rule[1][:highlighted] %>
 
                     <% if section %>
@@ -59,6 +60,7 @@
                     </span>
 
                     <% end %>
+                 <% end %>
                  <% end %>
                 </p>
             </div>
