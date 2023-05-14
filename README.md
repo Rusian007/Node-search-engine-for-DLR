@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project build using rails 7, elasticsearch, searchkick gem and redis.
+Laws are from Dhaka Law Report, we collected data through scanning the pages of the DLR books and using tessaract OCR to extract the texts. Bonsai.io was used for our elasticsearch.
+Site link - www.dlr.onrender.com
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+* rails, ruby
 
-* Configuration
+* Database - MySql
 
-* Database creation
+* cache servers - redis
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
