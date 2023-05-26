@@ -36,8 +36,14 @@ class RulesController < ApplicationController
       end
      
       results = Rules_helper.new
-   
+    if @rules.present?
       @rules = results.make_results_hash(@rules)
+    else
+      @rules = {}
+      puts "Rules did not return anything !"
+    end
+
+      
 
       # Store data in cache Storage
       Rails.cache.write('results', results.to_json )
