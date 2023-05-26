@@ -4,11 +4,10 @@ module RulesHelper
     
 
 		def make_results_hash(rules)
-
-      
+      @results = {} # Initialize @results as an empty hash
+      puts "Helper method started"
       rule_hash = {}
-      # Initialize an empty results hash
-      @results = {}
+    
 
                   # Loop through each hash object in search_results
       rules.each do |hash_object|
