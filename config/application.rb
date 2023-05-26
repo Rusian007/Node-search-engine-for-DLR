@@ -29,7 +29,7 @@ module ElasticSearcher
 
 
     config.before_configuration do
-     ENV["ELASTICSEARCH_URL"] = "https://ycny3liak4:ddji0raqsk@searcher-5880735921.us-east-1.bonsaisearch.net:443"
+     ENV["ELASTICSEARCH_URL"] = "https://ojghaclfnx:8ylob02p3d@searcher-4720511571.us-east-1.bonsaisearch.net:443"
      #ENV["ELASTICSEARCH_URL"] = "http://localhost:9200"
 
     end

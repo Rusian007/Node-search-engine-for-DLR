@@ -46,7 +46,7 @@ class RulesController < ApplicationController
       
 
       # Store data in cache Storage
-    #  Rails.cache.write('results', results.to_json )
+      Rails.cache.write('results', results.to_json )
 
      
      
