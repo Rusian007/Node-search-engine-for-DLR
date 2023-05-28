@@ -22861,3 +22861,119 @@ Processing by RulesController#context as HTML
 Completed 200 OK in 1384ms (Views: 42.2ms | ActiveRecord: 1270.1ms | Allocations: 10666)
 
 
+Started GET "/" for 127.0.0.1 at 2023-05-28 17:42:34 +0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (85.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1480)
+  Rendered layout layouts/application.html.erb (Duration: 183.9ms | Allocations: 18880)
+Completed 200 OK in 201ms (Views: 192.3ms | ActiveRecord: 0.0ms | Allocations: 22224)
+
+
+Started GET "/info" for 127.0.0.1 at 2023-05-28 17:42:45 +0600
+Processing by RulesController#info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/info.html.erb within layouts/application
+  Rendered rules/info.html.erb within layouts/application (Duration: 2.3ms | Allocations: 640)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 2119)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 2448)
+
+
+Started GET "/g.png" for 127.0.0.1 at 2023-05-28 17:42:45 +0600
+  
+ActionController::RoutingError (No route matches [GET] "/g.png"):
+  
+Started GET "/info" for 127.0.0.1 at 2023-05-28 17:43:51 +0600
+Processing by RulesController#info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/info.html.erb within layouts/application
+  Rendered rules/info.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2680)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 3666)
+
+
+Started GET "/g.png" for 127.0.0.1 at 2023-05-28 17:43:52 +0600
+  
+ActionController::RoutingError (No route matches [GET] "/g.png"):
+  
+Started GET "/info" for 127.0.0.1 at 2023-05-28 17:50:27 +0600
+Processing by RulesController#info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/info.html.erb within layouts/application
+  Rendered rules/info.html.erb within layouts/application (Duration: 1.0ms | Allocations: 616)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2648)
+Completed 200 OK in 8ms (Views: 7.7ms | Allocations: 3607)
+
+
+Started GET "/g.png" for 127.0.0.1 at 2023-05-28 17:50:27 +0600
+  
+ActionController::RoutingError (No route matches [GET] "/g.png"):
+  
+Started GET "/info" for 127.0.0.1 at 2023-05-28 17:53:41 +0600
+Processing by RulesController#info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/info.html.erb within layouts/application
+  Rendered rules/info.html.erb within layouts/application (Duration: 21.0ms | Allocations: 8151)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 9937)
+Completed 200 OK in 26ms (Views: 25.6ms | Allocations: 10897)
+
+
+Started GET "/info" for 127.0.0.1 at 2023-05-28 17:54:59 +0600
+Processing by RulesController#info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/info.html.erb within layouts/application
+  Rendered rules/info.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1324)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3107)
+Completed 200 OK in 6ms (Views: 5.1ms | Allocations: 4074)
+
+
+Started GET "/facebook.com" for 127.0.0.1 at 2023-05-28 17:55:03 +0600
+  
+ActionController::RoutingError (No route matches [GET] "/facebook.com"):
+  
+Started GET "/info" for 127.0.0.1 at 2023-05-28 17:55:19 +0600
+Processing by RulesController#info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/info.html.erb within layouts/application
+  Rendered rules/info.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1329)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3123)
+Completed 200 OK in 9ms (Views: 7.5ms | Allocations: 4094)
+
+
+Started GET "/info" for 127.0.0.1 at 2023-05-28 17:56:17 +0600
+Processing by RulesController#info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/info.html.erb within layouts/application
+  Rendered rules/info.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1324)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3120)
+Completed 200 OK in 10ms (Views: 9.5ms | Allocations: 4084)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-28 17:56:26 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 782)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2044)
+Completed 200 OK in 7ms (Views: 5.7ms | Allocations: 2324)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-28 17:56:47 +0600
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 915)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2633)
+Completed 200 OK in 8ms (Views: 6.8ms | Allocations: 3582)
+
+
+Started GET "/info" for 127.0.0.1 at 2023-05-28 17:56:49 +0600
+Processing by RulesController#info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/info.html.erb within layouts/application
+  Rendered rules/info.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1153)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2538)
+Completed 200 OK in 7ms (Views: 6.4ms | Allocations: 2817)
+
+

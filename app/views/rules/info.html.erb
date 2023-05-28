@@ -1,0 +1,164 @@
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<div id="carousel">
+
+  <div class="slide" aria-live="polite">
+    <div id="page-content1" class="content1">
+      <div id="home-div1">
+        <div id="home1" class="content-title1">
+          <h2 >Welcome</h2>
+        </div> 
+
+        <article>
+<%= image_tag("g.png", alt: "olla") %>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" aria-live="polite">
+    <div id="page-content1" class="content1">
+
+      <div id="home-div1">
+
+      <div id="home1" class="content-title1">
+        <h2 >Information</h2>
+      </div> 
+
+        <article>
+          <p>
+         This website provides an efficient way to search through Judicial rulings of Dhaka. We used Elasticsearch for accurate 
+         search results so you can now search using any keyword to find any Rulings at ease.
+         <br>   <br>
+          Please be advised, our dataset is limited, so you may not find everyting you are looking for.
+
+
+            </p>
+
+         </article>
+        </div>
+    </div>
+  </div>
+<div class="slide" aria-live="polite">
+<div id="page-content1" class="content1">
+      <div id="home-div1">
+        <div id="home1" class="content-title1">
+          <h2 >More info</h2>
+        </div> 
+
+        <article>
+          <p>
+          This website was created by a team of experts of NSU. There may be future updates.
+                       <br></br>
+                        <br></br>
+         
+            </p>
+        </article>
+      </div>
+    </div>
+  </div>
+<div class="slide" aria-live="polite">
+    <div id="page-content1" class="content1">
+      <div id="home-div1">
+        <div id="home1" class="content-title1">
+          <h2 >Contact</h2>
+        </div> 
+
+        <article>
+          <a href="https://www.facebook.com"><i class="fi-cnsuxl-facebook-circle"></i></a>
+        
+        <a href="https://www.twitter.com"><i class="fi-xnluxl-twitter"></i></a>
+        <a href="https://www.youtube.com"><i class="fi-xwsuxl-youtube"></i></a>
+        <a href="https://www.instagram.com"><i class="fi-xnsuxl-instagram"></i></a>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="carousel-controls">
+  <button id="back" class="material-symbols-outlined">arrow_back_ios_new</button>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <button id="forth" class="material-symbols-outlined">arrow_forward_ios</button>
+</div>
+ <script defer src="https://friconix.com/cdn/friconix.js"> </script> 
+<script>
+  let slides = document.querySelectorAll(".slide");
+let dots = document.querySelectorAll(".dot");
+let slideIndex = -1;
+
+document.getElementById("back").addEventListener("click", carouselDown);
+document.getElementById("forth").addEventListener("click", carouselUp);
+dots.forEach((dot) => {
+  dot.addEventListener("click", carouselDot);
+});
+window.addEventListener("keydown", carouselKeydown);
+
+function carouselDisplay() {
+  // Reset: all slides hidden, all dots inactive
+  slides.forEach((slide) => {
+    slide.style.opacity = "0";
+    slide.style.zIndex = "-1";
+  });
+  dots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+  // Display current slide, toggle current dot
+  slides[slideIndex].style.zIndex = "1";
+  setTimeout(() => {
+    slides[slideIndex].style.opacity = "1";
+  }, 1);
+  dots[slideIndex].classList.add("active");
+}
+
+function slideUp() {
+  if (slideIndex == slides.length - 1) {
+    slideIndex = 0;
+  } else {
+    slideIndex = slideIndex + 1;
+  }
+}
+
+function slideDown() {
+  if (slideIndex == 0) {
+    slideIndex = slides.length - 1;
+  } else {
+    slideIndex = slideIndex - 1;
+  }
+}
+
+function carouselUp() {
+  slideUp();
+  carouselDisplay();
+}
+setInterval(carouselUp, 7500);
+
+function carouselDown() {
+  slideDown();
+  carouselDisplay();
+}
+
+function carouselDot() {
+  slideIndex = Array.from(this.parentNode.children).indexOf(this) - 1;
+  carouselDisplay();
+}
+
+function carouselKeydown(e) {
+  if (e.key == "ArrowLeft") {
+    carouselDown();
+  } else if (e.key == "ArrowRight") {
+    carouselUp();
+  } else {
+    return;
+  }
+}
+
+// Setup on page load
+carouselUp();
+
+</script>
