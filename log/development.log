@@ -22977,3 +22977,1507 @@ Processing by RulesController#info as HTML
 Completed 200 OK in 7ms (Views: 6.4ms | Allocations: 2817)
 
 
+Started GET "/" for 127.0.0.1 at 2023-05-28 18:05:54 +0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (91.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RulesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/index.html.erb within layouts/application
+  Rendered rules/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1606)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 7147)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 10491)
+
+
+Started GET "/info" for 127.0.0.1 at 2023-05-28 18:05:57 +0600
+Processing by RulesController#info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/info.html.erb within layouts/application
+  Rendered rules/info.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2561)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 2891)
+
+
+Started GET "/info" for 127.0.0.1 at 2023-05-28 18:06:36 +0600
+Processing by RulesController#info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/info.html.erb within layouts/application
+  Rendered rules/info.html.erb within layouts/application (Duration: 1.2ms | Allocations: 530)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 9632)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 9847)
+
+
+Started GET "/info" for 127.0.0.1 at 2023-05-28 18:07:07 +0600
+Processing by RulesController#info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rules/info.html.erb within layouts/application
+  Rendered rules/info.html.erb within layouts/application (Duration: 0.9ms | Allocations: 535)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 7053)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 7265)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-28 18:07:27 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"kill"}
+  [1m[33mSection Search (1839.2ms)[0m  sections_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"kill","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"kill","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"kill","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"kill","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"highlight":{"fields":{"*.analyzed":{}},"fragment_size":0},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mSection Load (584.3ms)[0m  [1m[34mSELECT `sections`.* FROM `sections` WHERE `sections`.`id` IN (337, 722, 1220, 451, 836, 280, 665, 1137, 276, 661, 1090, 454, 839, 1218, 1146, 1309, 300, 685, 256, 641, 219, 604, 1141, 1474, 1133, 1177, 461, 846, 1132, 356, 741, 1219, 460, 845, 250, 635, 1279, 354, 739, 1306, 1194, 349, 734, 1253, 1475, 1493, 1176, 229, 614, 240, 625, 359, 744, 1260, 1433, 295, 680, 233, 618, 1102, 1375, 1439, 1318, 963, 1134, 450, 835, 1140, 1305, 1195, 1389, 218, 433, 603, 818, 1073, 239, 382, 624, 767, 1093, 1163, 518, 330, 715, 930, 1310, 91, 166, 284, 551, 669, 1212, 1259, 1363, 222, 226, 452, 607, 611, 837, 918, 942, 1120, 1173, 311, 318, 334, 458, 696, 703, 719, 843, 1256, 335, 455, 720, 840, 1411, 1494, 508, 893, 1311, 118, 217, 228, 310, 321, 602, 613, 695, 706, 1197, 1206, 1357, 1406, 1181, 1145, 141, 315, 457, 526, 700, 842, 1148, 1162, 1307, 326, 711, 1190, 1170, 127, 154, 539, 1303, 1420, 227, 364, 371, 612, 749, 756, 1262, 1484, 1492, 303, 688, 1251, 1418, 1268, 1428, 358, 743, 286, 671, 1147, 1198, 363, 748, 1252, 1301, 1393, 1802, 469, 854, 1480, 241, 626, 1094, 1320, 1361, 160, 545, 1109, 1202, 1292, 136, 521, 174, 559, 1201, 109, 496, 881, 973, 1087, 1812, 1811, 1810, 1813, 1883, 1504, 215, 600, 1808, 1528, 1250, 1498, 1347, 427, 812, 920, 1503, 1817, 1510, 1583, 1348, 1805, 1507, 260, 645, 1248, 1502, 426, 811, 1115, 1335)[0m
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (76.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (24, 28, 31, 35, 40, 41, 47, 48, 56, 59, 78, 87, 90, 91, 92, 94, 100, 112, 113, 122)[0m
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (66.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (65.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (102.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (77.4ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 56 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (85.2ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 78 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (108.3ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 40 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (73.4ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 48 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (74.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 24 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (73.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 47 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 48 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (87.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (75.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 112 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.2ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (76.4ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 28 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (74.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 59 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (76.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 87 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (104.4ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (92.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 122 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (68.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (71.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 94 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (105.4ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 91 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 48 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (82.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 100 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1247)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 2625)
+Completed 200 OK in 5507ms (Views: 14.7ms | Searchkick: 1839.2ms | ActiveRecord: 2867.5ms | Allocations: 175086)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-28 18:14:46 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"kill"}
+  [1m[33mSection Search (2604.9ms)[0m  sections_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"kill","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"kill","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"kill","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"kill","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"highlight":{"fields":{"*.analyzed":{}},"fragment_size":0},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mSection Load (942.8ms)[0m  [1m[34mSELECT `sections`.* FROM `sections` WHERE `sections`.`id` IN (337, 722, 1220, 451, 836, 280, 665, 1137, 276, 661, 1090, 454, 839, 1218, 1146, 1309, 300, 685, 256, 641, 219, 604, 1141, 1474, 1133, 1177, 461, 846, 1132, 356, 741, 1219, 460, 845, 250, 635, 1279, 354, 739, 1306, 1194, 349, 734, 1253, 1475, 1493, 1176, 229, 614, 240, 625, 359, 744, 1260, 1433, 295, 680, 233, 618, 1102, 1375, 1439, 1318, 963, 1134, 450, 835, 1140, 1305, 1195, 1389, 218, 433, 603, 818, 1073, 239, 382, 624, 767, 1093, 1163, 518, 330, 715, 930, 1310, 91, 166, 284, 551, 669, 1212, 1259, 1363, 222, 226, 452, 607, 611, 837, 918, 942, 1120, 1173, 311, 318, 334, 458, 696, 703, 719, 843, 1256, 335, 455, 720, 840, 1411, 1494, 508, 893, 1311, 118, 217, 228, 310, 321, 602, 613, 695, 706, 1197, 1206, 1357, 1406, 1181, 1145, 141, 315, 457, 526, 700, 842, 1148, 1162, 1307, 326, 711, 1190, 1170, 127, 154, 539, 1303, 1420, 227, 364, 371, 612, 749, 756, 1262, 1484, 1492, 303, 688, 1251, 1418, 1268, 1428, 358, 743, 286, 671, 1147, 1198, 363, 748, 1252, 1301, 1393, 1802, 469, 854, 1480, 241, 626, 1094, 1320, 1361, 160, 545, 1109, 1202, 1292, 136, 521, 174, 559, 1201, 109, 496, 881, 973, 1087, 1812, 1811, 1810, 1813, 1883, 1504, 215, 600, 1808, 1528, 1250, 1498, 1347, 427, 812, 920, 1503, 1817, 1510, 1583, 1348, 1805, 1507, 260, 645, 1248, 1502, 426, 811, 1115, 1335)[0m
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (585.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (24, 28, 31, 35, 40, 41, 47, 48, 56, 59, 78, 87, 90, 91, 92, 94, 100, 112, 113, 122)[0m
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (66.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (103.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (225.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (116.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 56 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (241.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 78 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (75.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 40 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (273.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 48 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (67.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 24 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (72.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 47 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 48 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (108.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (84.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 112 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (85.4ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 28 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (150.4ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 59 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (295.2ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 87 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (103.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (82.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 122 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (98.2ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (87.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 94 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (72.3ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 91 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 48 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (76.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 100 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1261)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 2983)
+Completed 200 OK in 13192ms (Views: 17.5ms | Searchkick: 2604.9ms | ActiveRecord: 4193.3ms | Allocations: 130839)
+
+
+Started POST "/rules/query" for 127.0.0.1 at 2023-05-28 18:15:29 +0600
+Processing by RulesController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "q"=>"kill"}
+  [1m[33mSection Search (4439.3ms)[0m  sections_development/_search {"query":{"bool":{"should":[{"dis_max":{"queries":[{"multi_match":{"query":"kill","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"kill","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"kill","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"kill","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}}]}},"highlight":{"fields":{"*.analyzed":{}},"fragment_size":0},"timeout":"11000ms","_source":false,"size":10000}
+  [1m[36mSection Load (3043.5ms)[0m  [1m[34mSELECT `sections`.* FROM `sections` WHERE `sections`.`id` IN (337, 722, 1220, 451, 836, 280, 665, 1137, 276, 661, 1090, 454, 839, 1218, 1146, 1309, 300, 685, 256, 641, 219, 604, 1141, 1474, 1133, 1177, 461, 846, 1132, 356, 741, 1219, 460, 845, 250, 635, 1279, 354, 739, 1306, 1194, 349, 734, 1253, 1475, 1493, 1176, 229, 614, 240, 625, 359, 744, 1260, 1433, 295, 680, 233, 618, 1102, 1375, 1439, 1318, 963, 1134, 450, 835, 1140, 1305, 1195, 1389, 218, 433, 603, 818, 1073, 239, 382, 624, 767, 1093, 1163, 518, 330, 715, 930, 1310, 91, 166, 284, 551, 669, 1212, 1259, 1363, 222, 226, 452, 607, 611, 837, 918, 942, 1120, 1173, 311, 318, 334, 458, 696, 703, 719, 843, 1256, 335, 455, 720, 840, 1411, 1494, 508, 893, 1311, 118, 217, 228, 310, 321, 602, 613, 695, 706, 1197, 1206, 1357, 1406, 1181, 1145, 141, 315, 457, 526, 700, 842, 1148, 1162, 1307, 326, 711, 1190, 1170, 127, 154, 539, 1303, 1420, 227, 364, 371, 612, 749, 756, 1262, 1484, 1492, 303, 688, 1251, 1418, 1268, 1428, 358, 743, 286, 671, 1147, 1198, 363, 748, 1252, 1301, 1393, 1802, 469, 854, 1480, 241, 626, 1094, 1320, 1361, 160, 545, 1109, 1202, 1292, 136, 521, 174, 559, 1201, 109, 496, 881, 973, 1087, 1812, 1811, 1810, 1813, 1883, 1504, 215, 600, 1808, 1528, 1250, 1498, 1347, 427, 812, 920, 1503, 1817, 1510, 1583, 1348, 1805, 1507, 260, 645, 1248, 1502, 426, 811, 1115, 1335)[0m
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (170.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` IN (24, 28, 31, 35, 40, 41, 47, 48, 56, 59, 78, 87, 90, 91, 92, 94, 100, 112, 113, 122)[0m
+  ↳ app/models/section.rb:10:in `each'
+  [1m[36mRule Load (66.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (102.2ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (98.3ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (114.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 56 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (73.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 78 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (69.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 40 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (68.8ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 48 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (92.3ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 24 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (519.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 47 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 48 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (138.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 31 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (72.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 112 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (417.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 28 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (233.9ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 59 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (272.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 87 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (227.7ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (452.3ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 122 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (152.5ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (74.4ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 94 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (98.3ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 91 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 48 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mRule Load (74.6ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 100 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 113 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 92 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.1ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 41 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  [1m[36mCACHE Rule Load (0.0ms)[0m  [1m[34mSELECT `rules`.* FROM `rules` WHERE `rules`.`id` = 90 LIMIT 1[0m
+  ↳ app/helpers/rules_helper.rb:15:in `block in make_results_hash'
+  Rendering layout layouts/application.html.erb
+  Rendering rules/search.html.erb within layouts/application
+  Rendered rules/search.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 3000)
+Completed 200 OK in 12091ms (Views: 20.4ms | Searchkick: 4439.3ms | ActiveRecord: 6641.2ms | Allocations: 130633)
+
+

@@ -18,7 +18,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  background: #FFFAF0; 
+
 }
 
 .material-symbols-outlined {
@@ -119,13 +119,7 @@ h2{
   position: relative;
   padding: 10px;
 }
-#home-div1{
-  border: 1px solid black;
-  background-color: #F5F5DC;
-  padding: 0 40px 15px 40px;
-  margin-bottom: 25px;
-  border-radius: 8px;
-}
+
 article {
   text-align: start;
   padding: 10px;
