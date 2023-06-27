@@ -33,7 +33,16 @@ module ElasticSearcher
      #ENV["ELASTICSEARCH_URL"] = "http://localhost:9200"
 
     end
+	config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*' # Update this with the appropriate origins, e.g., 'http://localhost:3000'
 
+        resource '*',
+          headers: :any,
+          methods: [:get, :post, :put, :patch, :delete, :options, :head],
+          expose: ['Access-Token', 'Uid']
+      end
+    end
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

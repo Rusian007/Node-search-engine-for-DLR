@@ -11,4 +11,15 @@ Rails.application.routes.draw do
   get 'reindex', to: 'rules#reindex'
   get 'info', to: 'rules#info'
   get 'context/:rule_id/:section_id', to: 'rules#context' , as: :context
+
+
+  # Define API routes
+  namespace :api do
+    namespace :v1 do
+      get '/index', to: 'search_api#hello'
+      get '/search', to: 'search_api#search'
+     
+    end
+  end
+
 end

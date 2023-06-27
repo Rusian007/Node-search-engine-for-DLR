@@ -74,7 +74,6 @@ class RulesController < ApplicationController
       return
     end
      
-     # change to sqLite
 
     @details = results["results"][id]
     @rules_id = id

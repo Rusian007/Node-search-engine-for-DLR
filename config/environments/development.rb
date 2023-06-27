@@ -16,6 +16,7 @@ Rails.application.configure do
 
   # Enable server timing
   config.server_timing = true
+  config.api_only = true
 
   #config.cache_store = :mem_cache_store, 'localhost:11211', { expires_in: 5.minutes }
 
@@ -23,8 +24,8 @@ Rails.application.configure do
 
 
 config.cache_store = :redis_cache_store, {
-  url: ENV["REDIS_URL"] || "redis://red-cgkboa8rddleudu04th0:6379",
-  namespace: "searcher-redis-1",
+  url: ENV["REDIS_URL"] || "redis://red-cgkboa8rddleudu04th0:6379", #"redis://default:FBQCCQxewgzMimZVfuNJrstwUdcxkzQf@redis-17053.c292.ap-southeast-1-1.ec2.cloud.redislabs.com:17053" , 
+  namespace: "Rusian-free-db",
   expires_in: 5.minutes
 } 
 
