@@ -13,13 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: sql12616041
+  username: sql6637661
   password: <%= ENV["DATABASE_PASSWORD"] %>
-  host: sql12.freesqldatabase.com
+  host: sql6.freesqldatabase.com
 
 development:
   <<: *default
-  database: sql12616041
+  database: sql6637661
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -50,6 +50,7 @@ test:
 #
 production:
   <<: *default
-  database: sql12616041
-  username: sql12616041
+  database: sql6637661
+  username: sql6637661
   password: <%= ENV["DATABASE_PASSWORD"] %>
+#<%= ENV["DATABASE_PASSWORD"] %>
